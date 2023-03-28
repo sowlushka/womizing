@@ -1,1 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
+
+body {
+    /*Шрифты для всего проекта*/
+    font-family: 'Raleway', sans-serif;
+
+    background: white;
+    /*Поля проекта. В мобильной версии уберём через @media*/
+    padding: 54px 245px 0px 245px;
+}
+
+a {
+    text-decoration: dotted;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: [start-logo] 210px [start-menu] 6fr [start-phone] 1fr [start-basket] 40px;
+    border: 1px solid blue;
+    align-items: center;
+    gap: 5px;
+
+    font-size: 15px;
+}
+
+.nav-logo {
+    grid-column: start-logo/start-menu;
+    justify-self: left;
+
+}
+
+nav ul {
+    grid-column: start-menu/start-phone;
+}
+
+nav li {
+    display: inline-block;
+    /* Убираем маркеры */
+    list-style-type: none;
+    padding: 0px 23px;
+
+}
+
+
+/*-------------------СТИЛИ ЛОГОТИПА-------------------*/
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+}
+
+.logo img {
+    margin-right: 15px;
+}
+
+/*------------------------------------------------------*/
