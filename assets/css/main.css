@@ -1,3 +1,5 @@
+@import url('normalize.css');
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
 
 body {
@@ -18,7 +20,7 @@ nav {
     grid-template-columns: [start-logo] 145px [start-menu] 1fr [start-phone] 170px [start-basket] 40px;
     align-items: center;
     /*justify-items: center;*/
-    gap: 5px;
+    gap: 10px;
 
     font-size: 15px;
 }
@@ -43,6 +45,7 @@ nav {
     /*Фикс. ширина для элементов меню. Динамичная ширина - для полей*/
     grid-template-columns: 1fr 45px 1fr 45px 1fr 45px 1fr;
     justify-items: center;
+    gap: 10px;
 }
 
 .nav-main,
@@ -50,8 +53,6 @@ nav {
 .nav-brand,
 .nav-contacts {
     /*Прописываем стили, общие для всех элементов меню*/
-    padding-left: 5px;
-    padding-right: 5px;
     white-space: nowrap;
 }
 
@@ -121,12 +122,12 @@ nav {
 }
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 900px) {
 
     /*Контрольная точка. Ниже этой ширины вёрстка меню разметкой Figma не поддерживается. Переопределяем grid*/
     .nav-bar {
         grid-template-columns: 55px 1fr 55px 1fr 55px 1fr 55px;
-        justify-self: stretch;
+        justify-self: normal;
     }
 }
 
