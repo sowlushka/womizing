@@ -14,8 +14,13 @@ https://www.figma.com/file/OFNh7sSivQKwPRV4hBv8Yi/WOMAZING-%2B?node-id=0-1&t=DCg
 </head>
 
 <body>
+    <div class="logo sd"><!--Логотип для мобильного экрана-->
+        <img src="assets/buttons/logo.svg" alt="dress">
+        <span>WOMAZING</span>
+    </div>
+
     <nav>
-        <div class="nav-logo">
+        <div class="nav-logo md">
             <!--Логотип может использоваться сам по себе (в футере)
             оборачиваю в отдельный div для позиционирования в панели навигации-->
             <div class="logo">
@@ -24,7 +29,34 @@ https://www.figma.com/file/OFNh7sSivQKwPRV4hBv8Yi/WOMAZING-%2B?node-id=0-1&t=DCg
             </div>
         </div>
 
-        <div class="nav-bar">
+        <!--Меню для маленьких экранов-->
+        <div class="sd" role="navigation">
+            <div id="menuToggle">
+                <input type="checkbox" id="hambMenu" />
+                <span></span><!--Этот спан будет отображаться в виде линеечки в кубике-->
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <a href="#">
+                        <li>Главная</li>
+                    </a>
+                    <a href="shop.html">
+                        <li>Магазин</li>
+                    </a>
+                    <a href="brand.html">
+                        <li>О бренде</li>
+                    </a>
+                    <a href="contacts.html">
+                        <li>Контакты</li>
+                    </a>
+                </ul>
+
+            </div>
+            <label for="hambMenu">МЕНЮ</label>
+        </div>
+
+        <!--Элементы меню для medium экранов и более-->
+        <div class="nav-bar md">
             <div class="nav-main">
                 <a href="#">Главная</a>
             </div>
@@ -38,10 +70,13 @@ https://www.figma.com/file/OFNh7sSivQKwPRV4hBv8Yi/WOMAZING-%2B?node-id=0-1&t=DCg
                 <a href="contacts.html">Контакты</a>
             </div>
         </div>
-        <div class="phone">
+        <div class="nav-phone">
             <a href="#"><img src="assets/buttons/phone.svg" alt="телефон">
                 <span>+7 (495) 823-54-12</span>
             </a>
+        </div>
+        <div class="nav-basket">
+            <a href="basket.html"><img src="assets/buttons/basket.svg" alt="корзина"></a>
         </div>
     </nav>
 
