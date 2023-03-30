@@ -35,11 +35,12 @@ nav {
 .nav-bar {
     grid-column: start-menu/start-phone;
 
- 
-/*Необходимо добиться в десктопной версии ширины между элементами меню не более 45px
+
+    /*Необходимо добиться в десктопной версии ширины между элементами меню не более 45px
 для узких экранов ширина должна быть меньше (минимум 5px). Это делаем на гридах*/
     display: grid;
-    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    /*Фикс. ширина для элементов меню. Динамичная ширина - для полей*/
+    grid-template-columns: 100px minmax(1fr, 45px) 100px minmax(1fr, 45px) 100px minmax(1fr, 45px) 100px;
     justify-items: center;
 }
 
@@ -91,18 +92,20 @@ nav {
 
 
 
-@media screen and (max-width: 1100px){
+@media screen and (max-width: 1100px) {
+
     /*Промежуточный экран*/
-    body{
+    body {
         /*Поля делаем меньше, но пока не убираем*/
         padding-left: 5vw;
         padding-right: 5vw;
     }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 400px) {
+
     /*Экран мобилки*/
-    body{
+    body {
         /*Оставляем минимальные поля*/
         padding-left: 5px;
         padding-right: 5px;
