@@ -12,25 +12,24 @@ body {
 }
 
 
-.sd {
-    /*Все блоки на странице, имеющий данный класс, должны отображаться
-    только на small display (мобильник), в других случая будут скрыты*/
-    display: none;
-}
-
-
 a {
     text-decoration: none;
 }
 
+h1 {
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 110%;
+}
+
 nav {
     display: grid;
-    grid-template-columns: [start-logo] 145px [start-menu] 1fr [start-phone] 170px [start-basket] 40px;
+    grid-template-columns: [start-logo] 145px 1.5fr [start-menu] 3.5fr [end-menu] 1fr [start-phone] 170px [start-basket] 2fr;
     align-items: center;
-    /*justify-items: center;*/
     gap: 10px;
 
     font-size: 15px;
+    letter-spacing: 0.02em;
 }
 
 .nav-logo {
@@ -38,12 +37,9 @@ nav {
     justify-self: left;
 }
 
-.nav-bar * {
-    outline: 1px solid blue;
-}
 
 .nav-bar {
-    grid-column: start-menu/start-phone;
+    grid-column: start-menu/end-menu;
     justify-self: end;
 
 
@@ -53,7 +49,7 @@ nav {
     /*Фикс. ширина для элементов меню. Динамичная ширина - для полей*/
     grid-template-columns: 1fr 45px 1fr 45px 1fr 45px 1fr;
     justify-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .nav-main,
@@ -83,8 +79,8 @@ nav {
 
 /*---------------Стили телефонного номера-------------*/
 .nav-phone {
+    grid-column: start-phone/start-basket;
     padding: 5px;
-    border: 1px solid red;
     line-height: 1em;
 }
 
@@ -97,8 +93,8 @@ nav {
 }
 
 /*-------------СТИЛЬ КОРЗИНЫ В МЕНЮ НАВИГАЦИИ---------*/
-.nav-basket{
-    grid-column: 4/5;
+.nav-basket {
+    grid-column: start-basket/-1;
     justify-self: end;
 }
 
@@ -119,6 +115,11 @@ nav {
 
 
 
+.sd {
+    /*Все блоки на странице, имеющий данный класс, должны отображаться
+    только на small display (мобильник), в других случая будут скрыты*/
+    display: none;
+}
 
 
 
@@ -126,16 +127,7 @@ nav {
 
     /*Ширина, при которой разметка меню из figma больше не поддерживается. Делаем динамичные поля в body
 Освобождаем место под меню в панели навигатора*/
-    body {
 
-        padding-left: 3vw;
-        padding-right: 3vw;
-    }
-
-}
-
-
-@media screen and (max-width: 900px) {
 
     /*Контрольная точка. Ниже этой ширины вёрстка меню разметкой Figma не поддерживается. Переопределяем grid*/
     .nav-bar {
@@ -144,13 +136,36 @@ nav {
     }
 }
 
+
+@media screen and (max-width: 1000px) {
+    body {
+
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+
+}
+
+@media screen and (max-width: 720px) {
+    body {
+
+        padding: 5px 5px 0px 5px;
+    }
+
+    nav {
+        font-size: 14px;
+        gap: 5px;
+    }
+
+}
+
 @media screen and (max-width: 480px) {
 
     /*Экран мобилки*/
     body {
         /*Оставляем минимальные поля*/
-        padding-left: 5px;
-        padding-right: 5px;
+
+        font-size: 12px;
     }
 
     .sd {
@@ -159,11 +174,31 @@ nav {
         align-items: center;
     }
 
-    .md{
+    .md {
         display: none;
     }
 
-     /*---------------------------------------------------
+    .logo {
+        margin: 10px;
+    }
+
+    nav {
+        grid-template-columns: 1.1fr 150px 1fr;
+        gap: 5px;
+        font-size: 12px;
+    }
+
+    .nav-phone {
+        grid-column: 2/3;
+    }
+
+    .nav-basket {
+        grid-column: 3/4;
+    }
+
+
+
+    /*---------------------------------------------------
     Стили для работы меню кубика-бургера
     За основу взят пример отсюда: 
     https://codepen.io/erikterwan/pen/EVzeRP
@@ -218,7 +253,7 @@ nav {
         margin-left: 5px;
         position: relative;
 
-        background: #E0E0E0;
+        background: #303030;
         border-radius: 3px;
 
         z-index: 1;
@@ -241,6 +276,7 @@ nav {
     #menuToggle input:checked~span {
         opacity: 1;
         transform: rotate(45deg) translate(-2px, -1px);
+        /*Цвет крестика*/
         background: #E0E0E0;
     }
 
@@ -257,12 +293,12 @@ nav {
         /*Стиль для раскрытого меню*/
         position: absolute;
         width: 100px;
-        margin: -50px 0 0 -50px;
+        margin: -35px 0px 0px -50px;
         /*Верхний отступ 70px - под палец,
         чтобы случайно не закрыть*/
         padding: 70px 5px 0px 50px;
         /*Цвет фона открытого меню*/
-        background-color: rgba(50, 96, 50, 0.9);
+        background-color: rgba(110, 156, 159, 0.9);
         /*VS-code подсказал
          прикольный стиль смешивания из трёх букв*/
         background-blend-mode: hue;
@@ -278,7 +314,8 @@ nav {
 
     #menu li {
         padding: 10px 0;
-        font-size: 11px;
+        color: #E0E0E0;
+        /*font-size: 11px;*/
 
     }
 
