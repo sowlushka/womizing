@@ -1,5 +1,3 @@
-@import url('normalize.css');
-
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
 
 body {
@@ -11,18 +9,47 @@ body {
     padding: 54px 250px 0px 250px;
 }
 
+
+
+/*---------------Блок стиля ссылок в проекте----------------*/
 a {
     text-decoration: none;
+    color: black;
+}
+
+
+.link-current {
+    color: #509498;
+    font-weight: 500;
+}
+
+.link-img-container:hover {
+    height: 100%;
+    background: #6E9C9F;
+    background-blend-mode: lighten;
+}
+
+/*------------------------------------------------------*/
+
+
+h1 {
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 110%;
 }
 
 nav {
     display: grid;
-    grid-template-columns: [start-logo] 145px [start-menu] 1fr [start-phone] 170px [start-basket] 40px;
+    grid-template-columns: [start-logo] 145px 1.5fr [start-menu] 3.5fr [end-menu] 1fr [start-phone] 170px [start-basket] 2fr;
     align-items: center;
-    /*justify-items: center;*/
     gap: 10px;
-
     font-size: 15px;
+    margin-bottom: 10px;
+}
+
+nav a:hover {
+    background: #6E9C9F;
+    color: #E0E0E0;
 }
 
 .nav-logo {
@@ -30,12 +57,9 @@ nav {
     justify-self: left;
 }
 
-.nav-bar * {
-    outline: 1px solid blue;
-}
 
 .nav-bar {
-    grid-column: start-menu/start-phone;
+    grid-column: start-menu/end-menu;
     justify-self: end;
 
 
@@ -45,7 +69,7 @@ nav {
     /*Фикс. ширина для элементов меню. Динамичная ширина - для полей*/
     grid-template-columns: 1fr 45px 1fr 45px 1fr 45px 1fr;
     justify-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .nav-main,
@@ -74,20 +98,53 @@ nav {
 
 
 /*---------------Стили телефонного номера-------------*/
-.phone {
-    padding: 5px;
-    border: 1px solid red;
-    line-height: 1em;
+.nav-phone {
+    grid-column: start-phone/start-basket;
 }
 
-.phone img {
-    float: left;
+.nav-phone a {
+    display: flex;
+    align-items: center;
+
 }
 
-.phone span {
-    padding-left: 15px;
+.nav-phone span {
+    padding-left: 13px;
 }
 
+
+.phone-img {
+    display: inline-block;
+    height: 15px;
+    width: 13px;
+}
+
+.phone-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.phone-img img:nth-of-type(2) {
+    /*Изначально второе изображение трубки скрыто*/
+    display: none;
+}
+
+
+.nav-phone:hover img:nth-of-type(1) {
+    display: none;
+}
+
+.nav-phone:hover img:nth-of-type(2) {
+    display: block;
+}
+
+
+/*-------------СТИЛЬ КОРЗИНЫ В МЕНЮ НАВИГАЦИИ---------*/
+.nav-basket {
+    grid-column: start-basket/-1;
+    justify-self: end;
+}
 
 /*-------------------СТИЛИ ЛОГОТИПА-------------------*/
 .logo {
@@ -105,7 +162,26 @@ nav {
 /*------------------------------------------------------*/
 
 
+/*Стили затирания блоков доступны для всех
+котрольных точек @media*/
+.sd,
+.md-block,
+.md-grid,
+.md-flex {
+    display: none;
+}
 
+.lg-block {
+    display: block;
+}
+
+.lg-grid {
+    display: grid;
+}
+
+.lg-flex {
+    display: flex;
+}
 
 
 
@@ -113,16 +189,7 @@ nav {
 
     /*Ширина, при которой разметка меню из figma больше не поддерживается. Делаем динамичные поля в body
 Освобождаем место под меню в панели навигатора*/
-    body {
 
-        padding-left: 3vw;
-        padding-right: 3vw;
-    }
-
-}
-
-
-@media screen and (max-width: 900px) {
 
     /*Контрольная точка. Ниже этой ширины вёрстка меню разметкой Figma не поддерживается. Переопределяем grid*/
     .nav-bar {
@@ -131,12 +198,260 @@ nav {
     }
 }
 
+
+@media screen and (max-width: 1000px) {
+    body {
+
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+
+}
+
+@media screen and (max-width: 720px) {
+    body {
+
+        padding: 5px 5px 0px 5px;
+        font-size: 14px;
+    }
+
+    nav {
+        grid-template-columns: 1fr 170px 40px;
+        font-size: 14px;
+        gap: 10px;
+
+    }
+
+    .nav-bar {
+        grid-column: 1/2;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 5px;
+    }
+
+
+    .nav-main {
+        grid-column: 1/2;
+    }
+
+    .nav-shop {
+        grid-column: 2/3;
+    }
+
+    .nav-brand {
+        grid-column: 3/4;
+    }
+
+    .nav-contacts {
+        grid-column: 4/5;
+    }
+
+    .nav-phone {
+        grid-column: 2/3;
+        justify-self: end;
+    }
+
+    .nav-basket {
+        grid-column: 3/4;
+    }
+
+
+    /*Стили отображения средних экранов доступны только для средних экранов*/
+    .sd,
+    .lg-block,
+    .lg-grid,
+    .lg-flex {
+        display: none;
+    }
+
+    .md-block {
+        display: block;
+    }
+
+    .md-flex {
+        display: flex;
+    }
+
+    .md-grid {
+        display: grid;
+    }
+
+}
+
 @media screen and (max-width: 480px) {
 
     /*Экран мобилки*/
     body {
         /*Оставляем минимальные поля*/
+
+        font-size: 12px;
+    }
+
+    .lg,
+    .md-block,
+    .md-flex,
+    .md-grid,
+    .lg-block,
+    .lg-grid,
+    .lg-flex {
+        display: none;
+    }
+
+    .sd {
+        /*Показываем блок, доступный только для small display (мобилка)*/
+        display: flex;
+        align-items: center;
+    }
+
+
+
+    .logo {
+        margin: 10px;
+    }
+
+    nav {
+        grid-template-columns: 1.1fr 170px 1fr;
+        gap: 5px;
+    }
+
+    .nav-phone {
+        grid-column: 2/3;
+    }
+
+    .nav-basket {
+        grid-column: 3/4;
+    }
+
+
+
+    /*---------------------------------------------------
+    Стили для работы меню кубика-бургера
+    За основу взят пример отсюда: 
+    https://codepen.io/erikterwan/pen/EVzeRP
+    -----------------------------------------------------*/
+    label {
         padding-left: 5px;
-        padding-right: 5px;
+        /*Цвет шрифта рядом с кубиком*/
+        color: #303030;
+    }
+
+    #menuToggle {
+        display: block;
+        z-index: 1;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    #menuToggle a {
+        text-decoration: none;
+        /*Цвет шрифта внутри меню*/
+        color: #303030;
+        transition: color 0.3s ease;
+    }
+
+    #menuToggle a:hover {
+        color: tomato;
+    }
+
+
+    #menuToggle input {
+        /*Стиль чекбокса в открытом меню*/
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        cursor: pointer;
+        opacity: 0;
+        /* hide this */
+        z-index: 2;
+        /* and place it over the hamburger */
+
+        -webkit-touch-callout: none;
+    }
+
+    #menuToggle span {
+        /*Стиль для горизонтальной линии
+        в картинке для закрытого меню*/
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        margin-left: 5px;
+        position: relative;
+
+        background: #303030;
+        border-radius: 3px;
+
+        z-index: 1;
+
+        transform-origin: 4px 0px;
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            opacity 0.55s ease;
+    }
+
+    #menuToggle span:first-child {
+        transform-origin: 0% 0%;
+    }
+
+    #menuToggle span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+
+    #menuToggle input:checked~span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        /*Цвет крестика*/
+        background: #E0E0E0;
+    }
+
+    #menuToggle input:checked~span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    #menuToggle input:checked~span:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    #menu {
+        /*Стиль для раскрытого меню*/
+        position: absolute;
+        width: 100px;
+        margin: -35px 0px 0px -50px;
+        /*Верхний отступ 70px - под палец,
+        чтобы случайно не закрыть*/
+        padding: 70px 5px 0px 50px;
+        /*Цвет фона открытого меню*/
+        background-color: rgba(110, 156, 159, 0.9);
+        /*VS-code подсказал
+         прикольный стиль смешивания из трёх букв*/
+        background-blend-mode: hue;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        /* to stop flickering of text in safari */
+
+        transform-origin: 0% 0%;
+        transform: translate(-100%, 0);
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    }
+
+    #menu li {
+        padding: 10px 0;
+        color: #E0E0E0;
+        /*font-size: 11px;*/
+
+    }
+
+    #menuToggle ul {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #menuToggle input:checked~ul {
+        transform: none;
+
     }
 }
