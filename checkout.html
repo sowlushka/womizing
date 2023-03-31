@@ -5,12 +5,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <title>Оформление заказа</title>
 
 </head>
 
 <body>
+    <!--Логотип и панель навигации-->
+    <div class="logo md-block sd"><!--Логотип для мобильного экрана-->
+        <img src="assets/buttons/logo.svg" alt="dress">
+        <span>WOMAZING</span>
+    </div>
+
+    <nav>
+        <div class="nav-logo lg-block">
+            <!--Логотип может использоваться сам по себе (в футере)
+                оборачиваю в отдельный div для позиционирования в панели навигации-->
+            <div class="logo">
+                <img src="assets/buttons/logo.svg" alt="dress">
+                <span>WOMAZING</span>
+            </div>
+        </div>
+
+        <!--Меню для маленьких экранов-->
+        <div class="sd" role="navigation">
+            <div id="menuToggle">
+                <input type="checkbox" id="hambMenu" />
+                <span></span><!--Этот спан будет отображаться в виде линеечки в кубике-->
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <a href="#">
+                        <li>Главная</li>
+                    </a>
+                    <a href="shop.html">
+                        <li>Магазин</li>
+                    </a>
+                    <a href="brand.html">
+                        <li>О бренде</li>
+                    </a>
+                    <a href="contacts.html">
+                        <li>Контакты</li>
+                    </a>
+                </ul>
+
+            </div>
+            <label for="hambMenu">МЕНЮ</label>
+        </div>
+
+        <!--Элементы меню для medium экранов и более-->
+        <div class="nav-bar md-grid lg-grid">
+            <div class="nav-main">
+                <a href="#" class="link-current">Главная</a>
+            </div>
+            <div class="nav-shop">
+                <a href="shop.html">Магазин</a>
+            </div>
+            <div class="nav-brand">
+                <a href="brand.html">О бренде</a>
+            </div>
+            <div class="nav-contacts">
+                <a href="contacts.html">Контакты</a>
+            </div>
+        </div>
+        <div class="nav-phone">
+            <a href="#">
+                <div class="phone-img">
+                    <img src="assets/buttons/phone.svg" alt="телефон">
+                    <img src="assets/buttons/phone-hover.svg" alt="телефон">
+                </div>
+                <span>+7 (495) 823-54-12</span>
+            </a>
+        </div>
+        <div class="nav-basket">
+            <a href="basket.html">
+                <div class="link-img-container">
+                    <img src="assets/buttons/basket.svg" alt="корзина">
+                </div>
+            </a>
+        </div>
+    </nav>
+    <!--Окончание панели навигации-->
+
+
 
 </body>
 
