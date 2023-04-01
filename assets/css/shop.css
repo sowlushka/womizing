@@ -1,0 +1,72 @@
+h1 {
+    margin-top: 196px;
+}
+
+header {
+    font-weight: 500;
+    margin-bottom: 214px;
+
+}
+
+.curr-page-position {
+    display: inline;
+    font-size: 17px;
+    color: #919191;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.item {
+    text-align: center;
+    border: 1px solid black;
+    margin: 20px 10px;
+    flex: 1;
+    padding-top: 19px;
+    padding-bottom: 19px;
+}
+
+#cat_all {
+    margin-left: 0px;
+}
+
+.cat_selected {
+    background-color: black;
+    color: white;
+}
+
+
+@media screen and (max-width: 720px) {
+    h1 {
+        margin-top: 50px;
+    }
+
+    header {
+        margin-bottom: 100px;
+    }
+
+}
+
+
+@media screen and (max-width: 480px) {
+
+    /*Стили маленьких экранов*/
+    h1 {
+        margin-top: 30px;
+    }
+
+    header {
+        margin-bottom: 30px;
+    }
+
+
+    .item {
+        margin: 10px 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
