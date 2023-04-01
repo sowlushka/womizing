@@ -1,0 +1,100 @@
+.container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+}
+
+.card {
+    width: 210px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    letter-spacing: 2%;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.list li {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.list li:hover {
+    transform: scale(1.2);
+}
+
+#brown {
+    background-color: #927876;
+}
+
+#grey {
+    background-color: #D4D4D4;
+}
+
+#pink {
+    background-color: #FD9696;
+}
+
+#orange {
+    background-color: #FDC796;
+}
+
+.card1 {
+    width: 260px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+}
+
+.text1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    letter-spacing: 2%;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.list1 {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding-left: 0px;
+    font-size: 12px;
+    
+    
+}
+
+.list1 li {
+    width: 32px;
+    height: 25px;
+    border: 1px solid black;
+    text-align: center;
+    padding-top: 12px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.list1 li:hover {
+    background-color: black;
+    color: white;
+}
