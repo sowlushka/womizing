@@ -61,12 +61,16 @@ header {
     gap: 10px;
 }
 
-figure {
-
-    padding: 0px 0px 50px 0px;
-    margin: 0px 0px 50px 0px;
+.figure {
     width: 32%;
+    /*margin-bottom: 50px;*/
+    padding-bottom: 50px;
 
+}
+
+figure {
+    padding: 0px 0px 0px 0px;
+    margin: 0px;
 }
 
 
@@ -86,6 +90,7 @@ figure img {
 }
 
 .card-background:hover {
+    display: block;
     background-color: #6E9C9F;
 }
 

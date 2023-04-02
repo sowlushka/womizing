@@ -370,12 +370,12 @@ nav a:hover {
     #menuToggle a {
         text-decoration: none;
         /*Цвет шрифта внутри меню*/
-        color: #303030;
+        color: #E0E0E0;
         transition: color 0.3s ease;
     }
 
     #menuToggle a:hover {
-        color: tomato;
+        color: rgb(200, 200, 200);
     }
 
 
@@ -464,10 +464,8 @@ nav a:hover {
     }
 
     #menu li {
-        padding: 10px 0;
-        color: #E0E0E0;
-        /*font-size: 11px;*/
-
+        /*Поля элементов меню*/
+        padding: 10px 10px;
     }
 
     #menuToggle ul {
