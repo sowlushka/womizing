@@ -4,12 +4,13 @@ body {
 }
 
 h1 {
-    margin-top: 196px;
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 
 header {
     font-weight: 500;
-    margin-bottom: 214px;
+    margin-bottom: 50px;
 
 }
 
@@ -22,24 +23,21 @@ header {
 .categories {
     display: flex;
     justify-content: space-between;
-    margin-top: 92px;
-    margin-bottom: 92px;
+    margin-top: 65px;
+    margin-bottom: 65px;
     width: 100%;
+    gap: 10px;
 
 }
 
 .categ_name {
     text-align: center;
     border: 1px solid black;
-    margin: 20px 10px;
     flex: 1;
     padding-top: 19px;
     padding-bottom: 19px;
 }
 
-#cat_all {
-    margin-left: 0px;
-}
 
 .cat_selected {
     background-color: black;
@@ -49,10 +47,15 @@ header {
 
 .counter_panel {
     color: #808080;
-    margin-top: 70px;
-    margin-bottom: 70px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
+
+
+
+
+/*-----------СТИЛИ КАРТОЧЕК ПРОЕКТА---------------*/
 .item_container {
     display: flex;
     flex-wrap: wrap;
@@ -111,6 +114,40 @@ figure img:hover {
 .new_price {
     display: inline;
     color: #998E78;
+}
+
+/*------------КОНЕЦ СТИЛЕЙ КАРТОЧЕК ПРОЕКТА-------*/
+
+
+/*------------Стили счётчика страниц------------*/
+.container-page-counter {
+    display: flex;
+    justify-content: center;
+    margin-top: 65px;
+    margin-bottom: 65px;
+    gap: 10px;
+
+}
+
+
+.page-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+}
+
+/*-------------------------------------------------*/
+
+/*Классы управления отступами*/
+.mt-none {
+    margin-top: 0px;
+}
+
+.mb-none {
+    margin-bottom: 0px;
 }
 
 
