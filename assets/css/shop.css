@@ -167,7 +167,7 @@ figure img:hover {
         margin-bottom: 100px;
     }
 
-    figure {
+    .figure {
         width: 48%;
     }
 }
@@ -191,9 +191,8 @@ figure img:hover {
         padding-bottom: 5px;
     }
 
-    figure {
-        padding: 0px 0px 20px 0px;
-        margin: 0px 0px 20px 0px;
+    .figure {
+        padding-bottom: 20px;
         width: 100%;
     }
 }
