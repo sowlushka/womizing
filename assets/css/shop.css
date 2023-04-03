@@ -1,10 +1,16 @@
+html,
+body {
+    background-color: #fff;
+}
+
 h1 {
-    margin-top: 196px;
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 
 header {
     font-weight: 500;
-    margin-bottom: 214px;
+    margin-bottom: 50px;
 
 }
 
@@ -17,28 +23,144 @@ header {
 .categories {
     display: flex;
     justify-content: space-between;
+    margin-top: 65px;
+    margin-bottom: 65px;
     width: 100%;
+    gap: 10px;
 
 }
 
-.item {
+.categ_name {
     text-align: center;
     border: 1px solid black;
-    margin: 20px 10px;
     flex: 1;
     padding-top: 19px;
     padding-bottom: 19px;
 }
 
-#cat_all {
-    margin-left: 0px;
+.categ_name:hover, .page-counter:hover{
+    background-color: #c0c0c0;
 }
+
 
 .cat_selected {
     background-color: black;
     color: white;
 }
 
+
+.counter_panel {
+    color: #808080;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+
+
+
+
+/*-----------СТИЛИ КАРТОЧЕК ПРОЕКТА---------------*/
+.item_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+}
+
+.figure {
+    width: 32%;
+    /*margin-bottom: 50px;*/
+    padding-bottom: 50px;
+
+}
+
+figure {
+    padding: 0px 0px 0px 0px;
+    margin: 0px;
+}
+
+
+figcaption {
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 7px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+}
+
+figure img {
+    width: 100%;
+
+
+}
+
+.card-background:hover {
+    display: block;
+    background-color: #6E9C9F;
+}
+
+figure img:hover {
+    opacity: 64%;
+}
+
+.price {
+    text-align: center;
+}
+
+.old_price {
+    display: inline;
+    color: #9C9C9C;
+    text-decoration: line-through;
+}
+
+.new_price {
+    display: inline;
+    color: #998E78;
+}
+
+/*------------КОНЕЦ СТИЛЕЙ КАРТОЧЕК ПРОЕКТА-------*/
+
+
+/*------------Стили счётчика страниц------------*/
+.container-page-counter {
+    display: flex;
+    justify-content: center;
+    margin-top: 65px;
+    margin-bottom: 65px;
+    gap: 10px;
+
+}
+
+
+.page-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+}
+
+/*-------------------------------------------------*/
+
+/*Классы управления отступами*/
+.mt-none {
+    margin-top: 0px;
+}
+
+.mb-none {
+    margin-bottom: 0px;
+}
+
+
+@media screen and (max-width: 1350px) {
+    .categ_name {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
 
 @media screen and (max-width: 720px) {
     h1 {
@@ -49,6 +171,9 @@ header {
         margin-bottom: 100px;
     }
 
+    .figure {
+        width: 48%;
+    }
 }
 
 
@@ -64,9 +189,14 @@ header {
     }
 
 
-    .item {
+    .categ_name {
         margin: 10px 5px;
         padding-top: 5px;
         padding-bottom: 5px;
+    }
+
+    .figure {
+        padding-bottom: 20px;
+        width: 100%;
     }
 }
