@@ -11,6 +11,7 @@ https://www.figma.com/file/OFNh7sSivQKwPRV4hBv8Yi/WOMAZING-%2B?node-id=0-1&t=DCg
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/navigation.css">
+    <link rel="stylesheet" href="assets/css/shop.css"><!--Стили строки с товарами-->
     <link rel="stylesheet" href="assets/css/item.css">
     <title>Товар</title>
 </head>
@@ -96,52 +97,77 @@ https://www.figma.com/file/OFNh7sSivQKwPRV4hBv8Yi/WOMAZING-%2B?node-id=0-1&t=DCg
 
     <div class="container">
         <div class="container1">
-        <div class="sweetshot">
-        <img src="assets/products/ben-eaton-L_kaTYIuu1o.jpg" alt="White sweetshot">
-        </div>
-        <div class="prices">
-        <div class="price1">
-        <p>$311</p>
-        </div>
-        <div class="price2">
-        <p style="text-decoration:line-through;">$450</p>
-        </div>
-        </div>
-                <div class="card">
-            <p class="text">Выберите цвет</p>
-            <ul class="list">
-                <li class="color-item" id="brown"></li>
-                <li class="color-item" id="grey"></li>
-                <li class="color-item" id="pink"></li>
-                <li class="color-item" id="orange"></li>
-            </ul>
-        </div>
+            <div class="sweetshot">
+                <img src="assets/products/ben-eaton-L_kaTYIuu1o.jpg" alt="White sweetshot">
+            </div>
+            <div class="prices">
+                <div class="price1">
+                    <p>$311</p>
+                </div>
+                <div class="price2">
+                    <p style="text-decoration:line-through;">$450</p>
+                </div>
+            </div>
+            <div class="card">
+                <p class="text">Выберите цвет</p>
+                <ul class="list">
+                    <li class="color-item" id="brown"></li>
+                    <li class="color-item" id="grey"></li>
+                    <li class="color-item" id="pink"></li>
+                    <li class="color-item" id="orange"></li>
+                </ul>
+            </div>
             <div class="card1">
-            <p class="text1">Выберите размер</p>
-            <ul class="list1">
-                <li class="color-item" id="S">S</li>
-                <li class="color-item" id="M">M</li>
-                <li class="color-item" id="L">L</li>
-                <li class="color-item" id="XL">XL</li>
-                <li class="color-item" id="XLL">XLL</li>
-            </ul>
+                <p class="text1">Выберите размер</p>
+                <ul class="list1">
+                    <li class="color-item" id="S">S</li>
+                    <li class="color-item" id="M">M</li>
+                    <li class="color-item" id="L">L</li>
+                    <li class="color-item" id="XL">XL</li>
+                    <li class="color-item" id="XLL">XLL</li>
+                </ul>
+            </div>
+            <div class="spinner-button">
+                <form method="get" action="basket.html">
+                    <input type="number" name="quantity" id="quantity" min="1" max="30" step="1" value="1">
+
+                    <button type="submit" class="add-to-cart">Добавить в корзину</button>
+                </form>
+            </div>
         </div>
-        <div class="spinner-button">
-    <form>
-        <label for="spinner"></label>
-        <input type="number" name="quantity" id="quantity" min="1" max="30" step="1">
-    </form>
-    <button type="button" class="add-to-cart">Добавить в корзину</button>
     </div>
+
+    <h3>Связанные товары</h3>
+    <div class="item_container">
+        <!--Начало блока из 3-х товаров-->
+        <div class="figure">
+            <figure id="item_id_7">
+                <a href="item.html?id=item_id_7" class="card-background">
+                    <img src="assets/products/brooke-cagle-h3vR1F8-caI.jpg" alt="Trulli" style="width:100%">
+                </a>
+                <figcaption><a href="item.html?id=item_id_7">Свитшот Sweet Shot</a></figcaption>
+            </figure>
+            <div class="price">
+                <div class="old_price">$229</div>
+                <div class="new_price">$129</div>
+            </div>
+        </div>
+
+        <!--Карточка товара-2-->
+        <div class="figure">
+            <figure id="item_id_5">
+                <a href="item.html?id=item_id_5" class="card-background">
+                    <img src="assets/products/christopher-campbell-va0YmkIFtPA.jpg" alt="Trulli" style="width:100%">
+                </a>
+                <figcaption><a href="item.html?id=item_id_5">Купальник Glow</a></figcaption>
+            </figure>
+            <div class="price">
+                <div class="old_price"></div>
+                <div class="new_price">$129</div>
+            </div>
+        </div>
     </div>
-    <p>Связанные товары</p><br>
-    <img src="assets/products/brooke-cagle-h3vR1F8-caI.jpg" alt="T-shirt">
-    <p>Футболка USA</p>
-    <p>$129</p>
-    <img src="assets/products/christopher-campbell-va0YmkIFtPA.jpg" alt="Bathing suit">
-    <p>Купальник Glow</p>
-    <p>$129</p>
-    </div>
+
 </body>
 
 </html>
