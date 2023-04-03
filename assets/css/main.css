@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
+@import url("const.css");
 
 body {
     /*Шрифты для всего проекта*/
@@ -10,9 +11,27 @@ body {
 }
 
 
+
+/*---------------Блок стиля ссылок в проекте----------------*/
 a {
     text-decoration: none;
+    color: black;
 }
+
+
+.link-current {
+    color: #509498;
+    font-weight: 500;
+}
+
+.link-img-container:hover {
+    height: 100%;
+    background: #6E9C9F;
+    background-blend-mode: lighten;
+}
+
+/*------------------------------------------------------*/
+
 
 h1 {
     font-weight: 500;
@@ -25,9 +44,13 @@ nav {
     grid-template-columns: [start-logo] 145px 1.5fr [start-menu] 3.5fr [end-menu] 1fr [start-phone] 170px [start-basket] 2fr;
     align-items: center;
     gap: 10px;
-
     font-size: 15px;
-    letter-spacing: 0.02em;
+    margin-bottom: 10px;
+}
+
+nav a:hover {
+    background: #6E9C9F;
+    color: #E0E0E0;
 }
 
 .nav-logo {
@@ -78,17 +101,45 @@ nav {
 /*---------------Стили телефонного номера-------------*/
 .nav-phone {
     grid-column: start-phone/start-basket;
-    padding: 5px;
-    line-height: 1em;
 }
 
-.nav-phone img {
-    float: left;
+.nav-phone a {
+    display: flex;
+    align-items: center;
+
 }
 
 .nav-phone span {
-    padding-left: 15px;
+    padding-left: 13px;
 }
+
+
+.phone-img {
+    display: inline-block;
+    height: 15px;
+    width: 13px;
+}
+
+.phone-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.phone-img img:nth-of-type(2) {
+    /*Изначально второе изображение трубки скрыто*/
+    display: none;
+}
+
+
+.nav-phone:hover img:nth-of-type(1) {
+    display: none;
+}
+
+.nav-phone:hover img:nth-of-type(2) {
+    display: block;
+}
+
 
 /*-------------СТИЛЬ КОРЗИНЫ В МЕНЮ НАВИГАЦИИ---------*/
 .nav-basket {
@@ -113,21 +164,54 @@ nav {
 
 
 
-.sd {
-    /*Все блоки на странице, имеющий данный класс, должны отображаться
-    только на small display (мобильник), в других случая будут скрыты*/
-    display: none;
+
+
+/*Стиль для Хлебных крошек, для выделения текущей страницы*/
+.curr-page-position {
+    display: inline;
+    font-size: 17px;
+    color: #919191;
 }
 
 
 
+/*---------------------------------------------------------------------
+Набор стилей для контроля отображения блоков на экранах разной ширины
+-----------------------------------------------------------------------*/
+/*Стили затирания блоков доступны для всех
+котрольных точек @media*/
+.sd,
+.md-block,
+.md-grid,
+.md-flex {
+    display: none;
+}
+
+.lg-block {
+    display: block;
+}
+
+.lg-grid {
+    display: grid;
+}
+
+.lg-flex {
+    display: flex;
+}
+
+/*---------------------------------------------------------------------*/
+
+
+
+
 @media screen and (max-width: 1350px) {
+    /*Ширина, при которой разметка меню из figma больше не поддерживается.
+Контрольная точка необходима только для отображения nav и не влияет
+на остальную часть макета
+*/
 
-    /*Ширина, при которой разметка меню из figma больше не поддерживается. Делаем динамичные поля в body
-Освобождаем место под меню в панели навигатора*/
 
-
-    /*Контрольная точка. Ниже этой ширины вёрстка меню разметкой Figma не поддерживается. Переопределяем grid*/
+    /*Переопределяем grid. Поля между элементами меню становятся динамичными*/
     .nav-bar {
         grid-template-columns: 55px 1fr 55px 1fr 55px 1fr 55px;
         justify-self: normal;
@@ -136,6 +220,8 @@ nav {
 
 
 @media screen and (max-width: 1000px) {
+
+    /*Контрольная точка, при которой поля body становятся маленькими и динамичными*/
     body {
 
         padding-left: 3vw;
@@ -145,14 +231,74 @@ nav {
 }
 
 @media screen and (max-width: 720px) {
+
+    /*Ниже этого значения будут проявляться блоки с классом md (middle display).
+    выше этого значения будут проявляться блоки с классом ld (large display)
+    */
     body {
 
         padding: 5px 5px 0px 5px;
+        font-size: 14px;
     }
 
     nav {
+        grid-template-columns: 1fr 170px 40px;
         font-size: 14px;
+        gap: 10px;
+
+    }
+
+    .nav-bar {
+        grid-column: 1/2;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 5px;
+    }
+
+
+    .nav-main {
+        grid-column: 1/2;
+    }
+
+    .nav-shop {
+        grid-column: 2/3;
+    }
+
+    .nav-brand {
+        grid-column: 3/4;
+    }
+
+    .nav-contacts {
+        grid-column: 4/5;
+    }
+
+    .nav-phone {
+        grid-column: 2/3;
+        justify-self: end;
+    }
+
+    .nav-basket {
+        grid-column: 3/4;
+    }
+
+
+    /*Стили отображения средних экранов доступны только для средних экранов*/
+    .sd,
+    .lg-block,
+    .lg-grid,
+    .lg-flex {
+        display: none;
+    }
+
+    .md-block {
+        display: block;
+    }
+
+    .md-flex {
+        display: flex;
+    }
+
+    .md-grid {
+        display: grid;
     }
 
 }
@@ -166,24 +312,31 @@ nav {
         font-size: 12px;
     }
 
+    .lg,
+    .md-block,
+    .md-flex,
+    .md-grid,
+    .lg-block,
+    .lg-grid,
+    .lg-flex {
+        display: none;
+    }
+
     .sd {
         /*Показываем блок, доступный только для small display (мобилка)*/
         display: flex;
         align-items: center;
     }
 
-    .md {
-        display: none;
-    }
+
 
     .logo {
         margin: 10px;
     }
 
     nav {
-        grid-template-columns: 1.1fr 150px 1fr;
+        grid-template-columns: 1.1fr 170px 1fr;
         gap: 5px;
-        font-size: 12px;
     }
 
     .nav-phone {
@@ -217,12 +370,12 @@ nav {
     #menuToggle a {
         text-decoration: none;
         /*Цвет шрифта внутри меню*/
-        color: #303030;
+        color: #E0E0E0;
         transition: color 0.3s ease;
     }
 
     #menuToggle a:hover {
-        color: tomato;
+        color: rgb(200, 200, 200);
     }
 
 
@@ -298,7 +451,7 @@ nav {
         /*Цвет фона открытого меню*/
         background-color: rgba(110, 156, 159, 0.9);
         /*VS-code подсказал
-         прикольный стиль смешивания из трёх букв*/
+        прикольный стиль смешивания из трёх букв*/
         background-blend-mode: hue;
         list-style-type: none;
         -webkit-font-smoothing: antialiased;
@@ -311,10 +464,8 @@ nav {
     }
 
     #menu li {
-        padding: 10px 0;
-        color: #E0E0E0;
-        /*font-size: 11px;*/
-
+        /*Поля элементов меню*/
+        padding: 10px 10px;
     }
 
     #menuToggle ul {
