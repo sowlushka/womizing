@@ -38,6 +38,10 @@ header {
     padding-bottom: 19px;
 }
 
+.categ_name:hover, .page-counter:hover{
+    background-color: #c0c0c0;
+}
+
 
 .cat_selected {
     background-color: black;

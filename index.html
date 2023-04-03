@@ -8,8 +8,15 @@ https://www.figma.com/file/OFNh7sSivQKwPRV4hBv8Yi/WOMAZING-%2B?node-id=0-1&t=DCg
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Слайдер: https://itchief.ru/javascript/slider -->
+
+    <script defer src="assets/js/itc-slider.js"></script><!--Слайдер-->
+
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/navigation.css">
+    <link rel="stylesheet" href="assets/css/itc-slider.css"><!--Слайдер-->
     <title>WOMAZING</title>
 
 </head>
@@ -83,9 +90,44 @@ https://www.figma.com/file/OFNh7sSivQKwPRV4hBv8Yi/WOMAZING-%2B?node-id=0-1&t=DCg
         </div>
     </nav>
     <!--Окончание панели навигации-->
-
+    <aside>
+        <div class="slider-container">
+            <div class="itc-slider" data-slider="itc-slider" data-autoplay="true" data-interval="7000">
+                <div class="itc-slider__wrapper">
+                    <div class="itc-slider__items">
+                        <div class="itc-slider__item">
+                            <!-- Контент 1 слайда -->
+                            <div class="slider-img-container">
+                                <img src="assets/img/dmitriy-7DD6tfTKqS4-unsplash-1.jpg">
+                            </div>
+                        </div>
+                        <div class="itc-slider__item">
+                            <!-- Контент 2 слайда -->
+                            <div class="slider-img-container">
+                                <img src="assets/img/gbarkz-vqKnuG8GaQc.png">
+                            </div>
+                        </div>
+                        <div class="itc-slider__item">
+                            <!-- Контент 3 слайда -->
+                            <div class="slider-img-container">
+                                <img src="assets/img/sonnie-hiles-gG70fyu3qsg.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Кнопки для перехода к предыдущему и следующему слайду -->
+                <!--
+                <button class="itc-slider__btn itc-slider__btn_prev"></button>
+                <button class="itc-slider__btn itc-slider__btn_next"></button>
+                -->
+            </div>
+        </div>
+    </aside>
     <main>
         Пока просто что-то есть. Потом заполню контентом
+
+
+
     </main>
 </body>
 

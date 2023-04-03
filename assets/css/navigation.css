@@ -1,0 +1,447 @@
+:root {
+    /*z-индекс панели навигации*/
+    --nav-z-index: 10;
+    --nav-position: relative;
+}
+
+
+nav {
+    z-index: var(--nav-z-index);
+    position: var(--nav-position);
+    display: grid;
+    grid-template-columns: [start-logo] 145px 1.5fr [start-menu] 3.5fr [end-menu] 1fr [start-phone] 170px [start-basket] 2fr;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+nav a:hover {
+    background: #6E9C9F;
+    color: #E0E0E0;
+}
+
+
+.link-current {
+    color: #509498;
+    font-weight: 500;
+}
+
+.link-img-container:hover {
+    height: 100%;
+    background: #6E9C9F;
+    background-blend-mode: lighten;
+}
+
+.nav-logo {
+    grid-column: start-logo/start-menu;
+    justify-self: left;
+}
+
+
+.nav-bar {
+
+    grid-column: start-menu/end-menu;
+    justify-self: end;
+
+
+    /*Необходимо добиться в десктопной версии ширины между элементами меню не более 45px.
+    Это делаем на гридах*/
+    display: grid;
+    /*Фикс. ширина для элементов меню. Динамичная ширина - для полей*/
+    grid-template-columns: 1fr 45px 1fr 45px 1fr 45px 1fr;
+    justify-items: center;
+    gap: 12px;
+}
+
+.nav-main,
+.nav-shop,
+.nav-brand,
+.nav-contacts {
+    /*Прописываем стили, общие для всех элементов меню*/
+    white-space: nowrap;
+}
+
+.nav-main {
+    grid-column: 1/2;
+}
+
+.nav-shop {
+    grid-column: 3/4;
+}
+
+.nav-brand {
+    grid-column: 5/6;
+}
+
+.nav-contacts {
+    grid-column: 7/8;
+}
+
+
+/*---------------Стили телефонного номера-------------*/
+.nav-phone {
+    grid-column: start-phone/start-basket;
+}
+
+.nav-phone a {
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-phone span {
+    padding-left: 13px;
+}
+
+.phone-img {
+    display: inline-block;
+    height: 15px;
+    width: 13px;
+}
+
+.phone-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.phone-img img:nth-of-type(2) {
+    /*Изначально второе изображение трубки скрыто*/
+    display: none;
+}
+
+
+.nav-phone:hover img:nth-of-type(1) {
+    display: none;
+}
+
+.nav-phone:hover img:nth-of-type(2) {
+    display: block;
+}
+
+
+/*-------------СТИЛЬ КОРЗИНЫ В МЕНЮ НАВИГАЦИИ---------*/
+.nav-basket {
+    grid-column: start-basket/-1;
+    justify-self: end;
+}
+
+/*-------------------СТИЛИ ЛОГОТИПА-------------------*/
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+}
+
+.logo img {
+    margin-right: 15px;
+}
+
+/*------------------------------------------------------*/
+/*---------------------------------------------------------------------
+Набор стилей для контроля отображения блоков на экранах разной ширины
+-----------------------------------------------------------------------*/
+/*Стили затирания блоков доступны для всех
+котрольных точек @media*/
+.sd,
+.md-block,
+.md-grid,
+.md-flex {
+    display: none;
+}
+
+.lg-block {
+    display: block;
+}
+
+.lg-grid {
+    display: grid;
+}
+
+.lg-flex {
+    display: flex;
+}
+
+/*---------------------------------------------------------------------*/
+
+
+
+
+@media screen and (max-width: 1350px) {
+    /*Ширина, при которой разметка меню из figma больше не поддерживается.
+Контрольная точка необходима только для отображения nav и не влияет
+на остальную часть макета
+*/
+
+
+    /*Переопределяем grid. Поля между элементами меню становятся динамичными*/
+    .nav-bar {
+        grid-template-columns: 55px 1fr 55px 1fr 55px 1fr 55px;
+        justify-self: normal;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    /*Контрольная точка, при которой поля body становятся маленькими и динамичными*/
+    body {
+
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+
+}
+
+@media screen and (max-width: 720px) {
+
+    /*Ниже этого значения будут проявляться блоки с классом md (middle display).
+    выше этого значения будут проявляться блоки с классом ld (large display)
+    */
+    body {
+
+        padding: 5px 5px 0px 5px;
+        font-size: 14px;
+    }
+
+    nav {
+        grid-template-columns: 1fr 170px 40px;
+        font-size: 14px;
+        gap: 10px;
+
+    }
+
+    .nav-bar {
+        grid-column: 1/2;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 5px;
+    }
+
+
+    .nav-main {
+        grid-column: 1/2;
+    }
+
+    .nav-shop {
+        grid-column: 2/3;
+    }
+
+    .nav-brand {
+        grid-column: 3/4;
+    }
+
+    .nav-contacts {
+        grid-column: 4/5;
+    }
+
+    .nav-phone {
+        grid-column: 2/3;
+        justify-self: end;
+    }
+
+    .nav-basket {
+        grid-column: 3/4;
+    }
+
+
+    /*Стили отображения средних экранов доступны только для средних экранов*/
+    .sd,
+    .lg-block,
+    .lg-grid,
+    .lg-flex {
+        display: none;
+    }
+
+    .md-block {
+        display: block;
+    }
+
+    .md-flex {
+        display: flex;
+    }
+
+    .md-grid {
+        display: grid;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    /*Экран мобилки*/
+    body {
+        /*Оставляем минимальные поля*/
+
+        font-size: 12px;
+    }
+
+    .lg,
+    .md-block,
+    .md-flex,
+    .md-grid,
+    .lg-block,
+    .lg-grid,
+    .lg-flex {
+        display: none;
+    }
+
+    .sd {
+        /*Показываем блок, доступный только для small display (мобилка)*/
+        display: flex;
+        align-items: center;
+    }
+
+
+
+    .logo {
+        margin: 10px;
+    }
+
+    nav {
+        grid-template-columns: 1.1fr 170px 1fr;
+        gap: 5px;
+    }
+
+    .nav-phone {
+        grid-column: 2/3;
+    }
+
+    .nav-basket {
+        grid-column: 3/4;
+    }
+
+
+
+    /*---------------------------------------------------
+    Стили для работы меню кубика-бургера
+    За основу взят пример отсюда: 
+    https://codepen.io/erikterwan/pen/EVzeRP
+    -----------------------------------------------------*/
+    label {
+        padding-left: 5px;
+        /*Цвет шрифта рядом с кубиком*/
+        color: #303030;
+    }
+
+    #menuToggle {
+        display: block;
+        z-index: 1;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    #menuToggle a {
+        text-decoration: none;
+        /*Цвет шрифта внутри меню*/
+        color: #E0E0E0;
+        transition: color 0.3s ease;
+    }
+
+    #menuToggle a:hover {
+        color: rgb(200, 200, 200);
+    }
+
+
+    #menuToggle input {
+        /*Стиль чекбокса в открытом меню*/
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        cursor: pointer;
+        opacity: 0;
+        /* hide this */
+        z-index: 2;
+        /* and place it over the hamburger */
+
+        -webkit-touch-callout: none;
+    }
+
+    #menuToggle span {
+        /*Стиль для горизонтальной линии
+        в картинке для закрытого меню*/
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        margin-left: 5px;
+        position: relative;
+
+        background: #303030;
+        border-radius: 3px;
+
+        z-index: 1;
+
+        transform-origin: 4px 0px;
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            opacity 0.55s ease;
+    }
+
+    #menuToggle span:first-child {
+        transform-origin: 0% 0%;
+    }
+
+    #menuToggle span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+
+    #menuToggle input:checked~span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        /*Цвет крестика*/
+        background: #E0E0E0;
+    }
+
+    #menuToggle input:checked~span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    #menuToggle input:checked~span:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    #menu {
+        /*Стиль для раскрытого меню*/
+        position: absolute;
+        width: 100px;
+        margin: -35px 0px 0px -50px;
+        /*Верхний отступ 70px - под палец,
+        чтобы случайно не закрыть*/
+        padding: 70px 5px 0px 50px;
+        /*Цвет фона открытого меню*/
+        background-color: rgba(110, 156, 159, 0.9);
+        /*VS-code подсказал
+        прикольный стиль смешивания из трёх букв*/
+        background-blend-mode: hue;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        /* to stop flickering of text in safari */
+
+        transform-origin: 0% 0%;
+        transform: translate(-100%, 0);
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    }
+
+    #menu li {
+        /*Поля элементов меню*/
+        padding: 10px 10px;
+    }
+
+    #menuToggle ul {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #menuToggle input:checked~ul {
+        transform: none;
+
+    }
+}
