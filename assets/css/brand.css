@@ -19,13 +19,12 @@ article {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    column-gap: 4vw;
 
 }
 
 .article_img {
     width: 25vw;
-    float: right;
 }
 
 .article_img img {
@@ -37,10 +36,21 @@ article {
     flex-wrap: wrap;
 }
 
-.pd-left {
-    padding-left: 8vw;
+.link-button {
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+    padding: 0px 20px 130px 20px;
 }
 
-.pd-right {
-    padding-right: 8vw;
+.link-button a {
+    display: inline-block;
+    background-color: #6E9C9F;
+    color: white;
+    font-weight: 400;
+    padding: 22px 50px;
+}
+
+.link-button a:hover {
+    background-color: #4c9fa5;
 }
