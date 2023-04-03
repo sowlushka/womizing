@@ -84,19 +84,18 @@ header {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
+    gap: 15px;
     padding-left: 0px;
     font-size: 12px;
-
-
+    font-weight: bold;
 }
 
 .list1 li {
-    width: 32px;
-    height: 25px;
+    width: 28px;
+    height: 20px;
     border: 1px solid black;
     text-align: center;
-    padding-top: 12px;
+    padding-top: 10px;
     cursor: pointer;
     transition: transform 0.3s;
 }
@@ -104,4 +103,22 @@ header {
 .list1 li:hover {
     background-color: black;
     color: white;
+}
+#quantity {
+    width: 35px;
+    height: 35px;
+}
+
+.add-to-cart {
+    width: 190px;
+    height: 45px;
+    background-color: #6E9C9F;
+    border: none;
+    color: #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+
+}
+.add-to-cart:hover {
+    opacity: 0.9;
 }
