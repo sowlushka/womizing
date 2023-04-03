@@ -1,4 +1,13 @@
+:root {
+    /*z-индекс панели навигации*/
+    --nav-z-index: 10;
+    --nav-position: relative;
+}
+
+
 nav {
+    z-index: var(--nav-z-index);
+    position: var(--nav-position);
     display: grid;
     grid-template-columns: [start-logo] 145px 1.5fr [start-menu] 3.5fr [end-menu] 1fr [start-phone] 170px [start-basket] 2fr;
     align-items: center;
@@ -31,6 +40,7 @@ nav a:hover {
 
 
 .nav-bar {
+
     grid-column: start-menu/end-menu;
     justify-self: end;
 
