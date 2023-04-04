@@ -82,19 +82,15 @@ header {
 .list li:hover {
     transform: scale(1.2);
 }
-
 #brown {
     background-color: #927876;
 }
-
 #grey {
     background-color: #D4D4D4;
 }
-
 #pink {
     background-color: #FD9696;
 }
-
 #orange {
     background-color: #FDC796;
 }
@@ -169,3 +165,7 @@ header {
     grid-row: 4/5;
 }
 
+h2 {
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
