@@ -1,10 +1,7 @@
 :root {
     --aside-height: 80vh;
+    /*Для широких экранов*/
     --aside-width: 42vw;
-    --slider-container-top: 120px;
-    --slider-conteiner-left: 50px;
-    --slider-container-bottom-padding: 50px;
-    --slider-container-right-padding: 10px;
 }
 
 
@@ -18,19 +15,38 @@ aside {
     background-color: #F1EADC;
 }
 
-.slider-container {
+.two-sliders-container * {
+    outline: 1px solid blue;
+}
+
+.two-sliders-container {
     position: relative;
-    top: var(--slider-container-top);
-    left: var(--slider-conteiner-left);
+    width: 100%;
+    height: calc(var(--aside-height) - 150px);
+    display: flex;
+    justify-content: center;
 }
 
-.slider-img-container {
-    height: calc(var(--aside-height) - var(--slider-container-top) - var(--slider-container-bottom-padding));
-    max-width: calc(var(--aside-width) - var(--slider-conteiner-left) - var(--slider-container-right-padding));
+.text-slider-container {
+    width: 50%;
+    flex-grow: 0;
+    flex-shrink: 1;
 }
 
-.slider-img-container img {
-    height: 100%;
-    max-width: 100%;
-    object-fit: cover;
+
+.text-slider-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-slider-content-info {
+    width: 70%;
+    font-size: 20px;
+    text-align: right;
+}
+
+
+.img-slider-container {
+    width: 50%;
 }

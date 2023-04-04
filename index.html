@@ -10,13 +10,15 @@ https://www.figma.com/file/OFNh7sSivQKwPRV4hBv8Yi/WOMAZING-%2B?node-id=0-1&t=DCg
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Слайдер: https://itchief.ru/javascript/slider -->
 
-    <script defer src="assets/js/itc-slider.js"></script><!--Слайдер-->
+    <script defer src="assets/js/itc-slider.js"></script>
+    <!--Слайдер-->
 
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/navigation.css">
-    <link rel="stylesheet" href="assets/css/itc-slider.css"><!--Слайдер-->
+    <link rel="stylesheet" href="assets/css/itc-slider.css">
+    <!--Слайдер-->
     <title>WOMAZING</title>
 
 </head>
@@ -91,26 +93,78 @@ https://www.figma.com/file/OFNh7sSivQKwPRV4hBv8Yi/WOMAZING-%2B?node-id=0-1&t=DCg
     </nav>
     <!--Окончание панели навигации-->
     <aside>
-        <div class="slider-container">
+
+    </aside>
+    <div class="two-sliders-container">
+        <!--Текстовый слайдер-->
+        <div class="text-slider-container">
             <div class="itc-slider" data-slider="itc-slider" data-autoplay="true" data-interval="7000">
                 <div class="itc-slider__wrapper">
                     <div class="itc-slider__items">
                         <div class="itc-slider__item">
                             <!-- Контент 1 слайда -->
-                            <div class="slider-img-container">
-                                <img src="assets/img/dmitriy-7DD6tfTKqS4-unsplash-1.jpg">
+                            <div class="text-slider-content">
+                                <h1>Новые поступления в этом сезоне</h1>
+                                <div class="text-slider-content-info">
+                                    Утонченные сочетания и бархатные оттенки - вот то, что вы искали в этом сезоне.
+                                    Время
+                                    исследовать.
+                                </div>
                             </div>
                         </div>
                         <div class="itc-slider__item">
                             <!-- Контент 2 слайда -->
-                            <div class="slider-img-container">
-                                <img src="assets/img/gbarkz-vqKnuG8GaQc.png">
+                            <div class="text-slider-content">
+                                <h1>Новые поступления в этом сезоне-2</h1>
+                                <div class="text-slider-content-info">
+                                    Утонченные сочетания и бархатные оттенки - вот то, что вы искали в этом сезоне.
+                                    Время
+                                    исследовать.
+                                </div>
                             </div>
                         </div>
                         <div class="itc-slider__item">
                             <!-- Контент 3 слайда -->
-                            <div class="slider-img-container">
-                                <img src="assets/img/sonnie-hiles-gG70fyu3qsg.jpg">
+                            <div class="text-slider-content">
+                                <h1>Новые поступления в этом сезоне-3</h1>
+                                <div class="text-slider-content-info">
+                                    Утонченные сочетания и бархатные оттенки - вот то, что вы искали в этом сезоне.
+                                    Время
+                                    исследовать.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Кнопки для перехода к предыдущему и следующему слайду -->
+                <!--
+        <button class="itc-slider__btn itc-slider__btn_prev"></button>
+        <button class="itc-slider__btn itc-slider__btn_next"></button>
+        -->
+            </div>
+        </div>
+
+        <!--Контейнер для слайдера с изображениями-->
+        <div class="img-slider-container">
+            <div class="itc-slider" data-slider="itc-slider" data-autoplay="true" data-interval="7000">
+                <div class="itc-slider__wrapper">
+                    <div class="itc-slider__items">
+                        <div class="itc-slider__item">
+                            <!-- Контент 1 слайда -->
+                            <div class="img-slider-contant">
+                                <!-- <img src="assets/img/dmitriy-7DD6tfTKqS4-unsplash-1.jpg"> -->
+                            </div>
+                        </div>
+                        <div class="itc-slider__item">
+                            <!-- Контент 2 слайда -->
+                            <div class="img-slider-contant">
+                                <!-- <img src="assets/img/gbarkz-vqKnuG8GaQc.png">-->
+                            </div>
+                        </div>
+                        <div class="itc-slider__item">
+                            <!-- Контент 3 слайда -->
+                            <div class="img-slider-contant">
+                                <!--  <img src="assets/img/sonnie-hiles-gG70fyu3qsg.jpg">-->
                             </div>
                         </div>
                     </div>
@@ -122,7 +176,9 @@ https://www.figma.com/file/OFNh7sSivQKwPRV4hBv8Yi/WOMAZING-%2B?node-id=0-1&t=DCg
                 -->
             </div>
         </div>
-    </aside>
+    </div>
+
+
     <main>
         Пока просто что-то есть. Потом заполню контентом
 
