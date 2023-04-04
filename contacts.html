@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/navigation.css">
+    <link rel="stylesheet" href="assets/css/contacts.css">
     <title>Контакты</title>
 
 </head>
@@ -81,10 +82,31 @@
         </div>
     </nav>
     <!--Окончание панели навигации-->
-
-
-
-
+    <div class="contacts-container">
+    <header>
+        <h1>Контакты</h1>
+        <div>
+            <a href="index.html">Главная</a>&ensp;&mdash;&ensp;
+            <div class="link-current">Контакты</div>
+        </div>
+    </header>
+    <div id="rectangle"></div>
+    <div>Телефон</div>
+    <div>+7 (495) 823-54-12</div>
+    <div>E-mail</div>
+    <div>info@sitename.com</div>
+    <div>Адрес</div>
+    <div>г. Москва, 3-я улица Строителей, 25</div>
+    
+    <form class="form">
+        <h3>Напишите нам</h3>
+        <input type="text" id="contact_name" placeholder="Имя">
+        <input type="email" id="email" placeholder="E-mail">
+        <input type="phone"  id="phone" placeholder="Телефон">
+        <textarea id="contact_message" placeholder="Сообщение"></textarea>
+        <button type="submit" class="send">Отправить</button>
+    </form>
+    </div>
 </body>
 
 </html>
