@@ -4,6 +4,10 @@
     height: 100%;
 }
 
+.menu {
+    display: flex;
+}
+
 h1 {
     margin-top: 90px;
     margin-bottom: 20px;
@@ -14,12 +18,12 @@ h1 {
     width: 100%;
     height: 350px;
     background-color: #D9D9D9;
-    margin-top: 120px;
+    margin-top: 180px;
 }
 
 .form {
     width: 350px;
-    margin-top: 50px;
+    margin-top: 150px;
 }
 
 h3 {
@@ -32,11 +36,13 @@ h3 {
     border: none;
     border-bottom: 1.5px solid #000000;
     padding: 10px 0 10px 0;
+    outline: none;
 }
 
 ::placeholder {
     font-size: 14px;
 }
+
 
 .form textarea {
     width: 100%;
@@ -44,6 +50,9 @@ h3 {
     border: none;
     border-bottom: 1px solid #000000;
     padding-top: 20px;
+    background-color: transparent;
+    outline: none;
+    resize: none;
 }
 
 .send {
@@ -59,4 +68,19 @@ h3 {
 }
 .send:hover {
     opacity: 0.9;
+}
+
+.contact-ways {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 55px;
+    margin-top: 70px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.telephone p, .email p, .address p {
+    display: block;
+    margin: 10px 0 10px 0;
 }
