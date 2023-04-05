@@ -1,9 +1,34 @@
+/*Стили большого экрана пропишем в переменных.
+Для адаптивной вёрстки переопределим их в @media*/
 :root {
+    /*Высота заголовка привязана к ширине экрана*/
+    --h1-font-size: 3.5vw;
+
+    /*Переменные габаритов боковой панели. Декоративные функции.*/
     --aside-height: 80vh;
-    /*Для широких экранов*/
     --aside-width: 42vw;
+
+    /*-------------------------------*/
+    /*Переменные габаритов  слайдера*/
+
+    /*Смещение слайдера относительно панели навигации*/
+    --slider-shift-top: 40px;
+    /*Ширина контейнера с текстом-описанием слайдера*/
+    --slider-content-info-width: 70%;
+    /*Абсолютный сдвиг высоты изображения относительно высоты декоративной панели.
+    Чем больше сдвиг, тем меньше изображение (больше расстояние до границ декоративной панели)*/
+    --img-height-shift: 200px;
+    /*Ширина слайдера с изображением*/
+    --img-slider-container-width: 50%;
+    /*Ширина слайдера с текстом*/
+    --text-slider-container-width: 50%;
+
 }
 
+
+h1 {
+    font-size: var(--h1-font-size);
+}
 
 aside {
     z-index: 0;
@@ -21,16 +46,18 @@ aside {
 
 .two-sliders-container {
     position: relative;
+    top: var(--slider-shift-top);
     width: 100%;
-    height: calc(var(--aside-height) - 150px);
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .text-slider-container {
-    width: 50%;
+    width: var(--text-slider-container-width);
     flex-grow: 0;
     flex-shrink: 1;
+
 }
 
 
@@ -41,12 +68,24 @@ aside {
 }
 
 .text-slider-content-info {
-    width: 70%;
+    width: var(--slider-content-info-width);
     font-size: 20px;
     text-align: right;
 }
 
 
 .img-slider-container {
-    width: 50%;
+    width: var(--img-slider-container-width);
+}
+
+.img-slider-contant {
+    text-align: right;
+    float: right;
+}
+
+.img-slider-contant img {
+    object-fit: contain;
+    max-height: calc(var(--aside-height) - var(--img-height-shift));
+    width: 100%;
+
 }

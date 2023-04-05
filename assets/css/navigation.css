@@ -181,11 +181,8 @@ nav a:hover {
     .nav-bar {
         grid-template-columns: 55px 1fr 55px 1fr 55px 1fr 55px;
         justify-self: normal;
+
     }
-}
-
-
-@media screen and (max-width: 1000px) {
 
     /*Контрольная точка, при которой поля body становятся маленькими и динамичными*/
     body {
@@ -193,8 +190,9 @@ nav a:hover {
         padding-left: 3vw;
         padding-right: 3vw;
     }
-
 }
+
+
 
 @media screen and (max-width: 720px) {
 
