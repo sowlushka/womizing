@@ -12,12 +12,13 @@
     /*Переменные габаритов  слайдера*/
 
     /*Смещение слайдера относительно панели навигации*/
-    --slider-shift-top: 40px;
+    --slider-shift-top: 0px;
     /*Ширина контейнера с текстом-описанием слайдера*/
-    --slider-content-info-width: 70%;
+    --slider-content-info-width: 73%;
+    --slider-content-info-font-size: 20px;
     /*Абсолютный сдвиг высоты изображения относительно высоты декоративной панели.
     Чем больше сдвиг, тем меньше изображение (больше расстояние до границ декоративной панели)*/
-    --img-height-shift: 200px;
+    --img-height-shift: 15vh;
     /*Ширина слайдера с изображением*/
     --img-slider-container-width: 50%;
     /*Ширина слайдера с текстом*/
@@ -40,9 +41,6 @@ aside {
     background-color: #F1EADC;
 }
 
-.two-sliders-container * {
-    outline: 1px solid blue;
-}
 
 .two-sliders-container {
     position: relative;
@@ -58,6 +56,10 @@ aside {
     flex-grow: 0;
     flex-shrink: 1;
 
+    /*Настройки контейнера для блока текст-слайдера и кнопки "В магазин" */
+    display: flex;
+    flex-direction: column;
+
 }
 
 
@@ -69,7 +71,7 @@ aside {
 
 .text-slider-content-info {
     width: var(--slider-content-info-width);
-    font-size: 20px;
+    font-size: var(--slider-content-info-font-size);
     text-align: right;
 }
 
@@ -87,5 +89,94 @@ aside {
     object-fit: contain;
     max-height: calc(var(--aside-height) - var(--img-height-shift));
     width: 100%;
+
+}
+
+.to_shop {
+    text-align: center;
+    display: inline-block;
+    align-self: center;
+    margin: 52px auto 20px auto;
+}
+
+.to_shop div {
+    padding: 22px 50px;
+    max-width: 245px;
+    background-color: #6E9C9F;
+    color: white;
+}
+
+main {
+    position: relative;
+    top: var(--slider-shift-top);
+}
+
+
+
+@media screen and (max-width: 1350px) {
+
+
+    :root {
+        /*Высота заголовка привязана к ширине экрана*/
+        --h1-font-size: 3.5vw;
+
+        /*Переменные габаритов боковой панели. Декоративные функции.*/
+        --aside-height: 60vh;
+        --aside-width: 42vw;
+        --slider-content-info-width: 90%;
+        --slider-content-info-font-size: 16px;
+        --img-height-shift: 15vh;
+
+    }
+
+}
+
+@media screen and (max-width: 720px) {
+
+
+    :root {
+        /*Высота заголовка привязана к ширине экрана*/
+        --h1-font-size: 3.5vw;
+
+        /*Переменные габаритов боковой панели. Декоративные функции.*/
+        --aside-height: 50vh;
+        --aside-width: 42vw;
+        --slider-content-info-width: 95%;
+        --slider-content-info-font-size: 14px;
+        --img-height-shift: 12vh;
+    }
+
+}
+
+@media screen and (max-width: 560px) {
+    :root {
+        --slider-content-info-font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    :root {
+        --aside-width: 100vw;
+        --img-slider-container-width: 100%;
+        --text-slider-container-width: 100%;
+        --h1-font-size: 20px;
+
+    }
+
+
+    /*Меняем структура проекта под мобильный экран*/
+    .two-sliders-container {
+        flex-direction: column-reverse;
+    }
+
+    .text-slider-content-info {
+        text-align: left;
+    }
+
+    .img-slider-contant {
+        text-align: center;
+        float: none;
+    }
 
 }
