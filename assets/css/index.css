@@ -89,6 +89,8 @@ aside {
     object-fit: contain;
     max-height: calc(var(--aside-height) - var(--img-height-shift));
     width: 100%;
+    /*Ставим маленький padding, чтобы скрыть артефакты от спрятанного изображения*/
+    padding-right: 2px;
 
 }
 
