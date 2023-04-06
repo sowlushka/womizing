@@ -1,0 +1,102 @@
+:root {
+    --z-index-callback-background: 12;
+    --z-index-form-callback: 13;
+    --form-callback-width: 300px;
+    --form-callback-height: 370px;
+
+}
+
+#form-callback {
+    display: none;
+    position: fixed;
+    z-index: var(--z-index-form-callback);
+    width: var(--form-callback-width);
+    height: var(--form-callback-height);
+    top: calc(50vh - (var(--form-callback-height) / 2));
+    left: calc(50vw - (var(--form-callback-width) / 2));
+    border: 1px solid #000000;
+    text-align: center;
+    background-color: #FFFFFF;
+
+}
+
+h4 {
+    margin: 50px 0 40px 0;
+
+}
+
+#form-callback input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: none;
+    border-bottom: 1.5px solid #000000;
+    padding: 10px 0 10px 0;
+}
+
+::placeholder {
+    font-size: 14px;
+}
+
+.contact-info {
+
+    padding: 0 45px 0 45px;
+}
+
+.send1 {
+    width: 210px;
+    height: 47px;
+    background-color: #6E9C9F;
+    border: none;
+    color: #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    margin-top: 40px;
+
+}
+
+.send1:hover {
+    opacity: 0.9;
+}
+
+#btn-close {
+    position: relative;
+    /*Сдвигаем слева направо относительно исходной позиции
+    на половину ширины формы за вычетом отступа от края и ширины крестика*/
+    left: calc(var(--form-callback-width) / 2 - 25px);
+    border: none;
+    background: none;
+    opacity: 0.7;
+    font-size: 30px;
+}
+
+#btn-close:hover {
+    opacity: 1;
+}
+
+#background-modal {
+    /*Стили заливки страницы под формой*/
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    background-color: #6E9C9F;
+    opacity: 64%;
+    z-index: var(--z-index-callback-background);
+
+}
+
+.background-display {
+    /*Стиль, создающий модальное окно*/
+    display: block !important;
+}
+
+#form-callback input:invalid {
+    border-bottom: 1.5px solid red;
+}
+
+#form-callback input:valid {
+    border-bottom: 1.5px solid #000000;
+}

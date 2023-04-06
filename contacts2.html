@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="assets/js/callback.js"></script>
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/navigation.css">
     <link rel="stylesheet" href="assets/css/contacts.css">
-    <link rel="stylesheet" href="assets/css/contacts2.css">
+    <link rel="stylesheet" href="assets/css/callback.css">
     <title>Контакты</title>
 
 </head>
@@ -66,7 +67,7 @@
             </div>
         </div>
         <div class="nav-phone">
-            <a href="#">
+            <a href="#" id="callback">
                 <div class="phone-img">
                     <img src="assets/buttons/phone.svg" alt="телефон">
                     <img src="assets/buttons/phone-hover.svg" alt="телефон">
@@ -84,59 +85,68 @@
     </nav>
     <!--Окончание панели навигации-->
     <div class="contacts-container">
-    <header>
-        <h1>Контакты</h1>
-        <div class="menu">
-            <a href="index.html">Главная</a>&ensp;&mdash;&ensp;
-            <div class="curr-page-position">Контакты</div>
+        <header>
+            <h1>Контакты</h1>
+            <div class="menu">
+                <a href="index.html">Главная</a>&ensp;&mdash;&ensp;
+                <div class="curr-page-position">Контакты</div>
+            </div>
+        </header>
+        <br>
+        <br>
+        <script type="text/javascript" charset="utf-8" async
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A630eaeda2bbcbfe8d9d00d4ab65ff323e7b515fcb1c00f2886d65aa6b525844f&amp;width=763&amp;height=350&amp;lang=ru_RU&amp;scroll=true"></script>
+
+        <div class="contact-ways">
+            <div class="telephone">
+                <p>Телефон</p>
+                <p>+7 (495) 823-54-12</p>
+            </div>
+
+            <div class="email">
+                <p>E-mail</p>
+                <p>info@sitename.com</p>
+            </div>
+
+            <div class="address">
+                <p>Адрес</p>
+                <p>г. Москва, 3-я улица Строителей, 25</p>
+            </div>
         </div>
-    </header>
-    <br>
-    <br>
-    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A630eaeda2bbcbfe8d9d00d4ab65ff323e7b515fcb1c00f2886d65aa6b525844f&amp;width=763&amp;height=350&amp;lang=ru_RU&amp;scroll=true"></script>
 
-    <div class="contact-ways">
-    <div class="telephone">
-    <p>Телефон</p>
-    <p>+7 (495) 823-54-12</p>
-    </div>
+        <form class="form">
+            <h4>Напишите нам</h4>
+            <input type="text" id="contact_name" placeholder="Имя">
+            <input type="email" id="email" placeholder="E-mail">
+            <input type="phone" id="phone" placeholder="Телефон">
+            <textarea id="contact_message" placeholder="Сообщение"></textarea>
+            <button type="submit" class="send">Отправить</button>
+        </form>
+        <br>
+        <br>
 
-    <div class="email">
-    <p>E-mail</p>
-    <p>info@sitename.com</p>
-    </div>
 
-    <div class="address">
-    <p>Адрес</p>
-    <p>г. Москва, 3-я улица Строителей, 25</p>
-    </div>
-    </div>
 
-    <form class="form">
-        <h4>Напишите нам</h4>
-        <input type="text" id="contact_name" placeholder="Имя">
-        <input type="email" id="email" placeholder="E-mail">
-        <input type="phone"  id="phone" placeholder="Телефон">
-        <textarea id="contact_message" placeholder="Сообщение"></textarea>
-        <button type="submit" class="send">Отправить</button>
-    </form>
-    <br>
-    <br>
-    <form class="form1">
-        <button class="btn-close">x</button>
-        <h4>Заказать обратный звонок</h4>
-        <div class="contact-info">
-        <input type="text" id="contact_name" placeholder="Имя">
-        <input type="email" id="email" placeholder="E-mail">
-        <input type="phone"  id="phone" placeholder="Телефон">
+
+        <div id="background-modal">
+
         </div>
-        <button type="submit" class="send1">Заказать звонок</button>
-        
-    
-        
-    </form>
+        <form id="form-callback" method="get" action="#">
+            <button id="btn-close">x</button>
+            <h4>Заказать обратный звонок</h4>
+            <div class="contact-info">
+                <input type="text" id="contact_name" name="contact_name" placeholder="Имя">
+                <input type="email" id="callback-email" name="email" placeholder="E-mail">
+                <input type="tel" id="callback-phone" name="phone" placeholder="Телефон: 7495823412" required>
+            </div>
+            <button type="submit" id="callback-submit" class="send1">Заказать звонок</button>
+        </form>
 
     </div>
 </body>
+
+<script>
+
+</script>
 
 </html>
