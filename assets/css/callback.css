@@ -3,7 +3,10 @@
     --z-index-form-callback: 13;
     --form-callback-width: 300px;
     --form-callback-height: 370px;
-
+    --z-index-return-call-background: 12;
+    --z-index-form-return-call: 13;
+    --form-return-call-width: 350px;
+    --form-return-call-height: 200px;
 }
 
 #form-callback {
@@ -99,4 +102,32 @@ h4 {
 
 #form-callback input:valid {
     border-bottom: 1.5px solid #000000;
+}
+
+#return-call {
+    /*display: none;*/
+    position: fixed;
+    z-index: var(--z-index-form-return-call);
+    width: var(--form-return-call-width);
+    height: var(--form-return-call-height);
+    top: calc(50vh - (var(--form-return-call-height) / 2));
+    left: calc(50vw - (var(--form-return-call-width) / 2));
+    border: 1px solid #000000;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+.send2 {
+    width: 120px;
+    height: 47px;
+    background-color: #FFFFFF;
+    border: 1px solid #6E9C9F;
+    color: #6E9C9F;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    margin-top: 10px;
+
+}
+
+.send2:hover:hover {
+    opacity: 0.9;
 }
