@@ -5,7 +5,7 @@
     --h1-font-size: 3.5vw;
 
     /*Переменные габаритов боковой панели. Декоративные функции.*/
-    --aside-height: 80vh;
+    --aside-height: 600px;
     --aside-width: 42vw;
 
     /*-------------------------------*/
@@ -18,11 +18,20 @@
     --slider-content-info-font-size: 20px;
     /*Абсолютный сдвиг высоты изображения относительно высоты декоративной панели.
     Чем больше сдвиг, тем меньше изображение (больше расстояние до границ декоративной панели)*/
-    --img-height-shift: 15vh;
+    --img-height-shift: 110px;
     /*Ширина слайдера с изображением*/
     --img-slider-container-width: 50%;
     /*Ширина слайдера с текстом*/
     --text-slider-container-width: 50%;
+
+    /*---------------------------------------------*/
+    /*Высота первого статичного фото в слайдере*/
+    --slider-photo-static-scale-1: 1.5;
+    --slider-photo-static-height-1: calc(318px / var(--slider-photo-static-scale-1));
+    --slider-photo-static-width-1: calc(190px / var(--slider-photo-static-scale-1));
+    /*Сдвиг слайдера справа налево */
+    --slider-photo-static-right-position-shift-1: 100px;
+    --slider-photo-static-bottom-position-shift-1: -10px;
 
 }
 
@@ -102,11 +111,31 @@ aside {
 }
 
 .to_shop div {
+    /*Кнопка: перейти в магазин*/
     padding: 22px 50px;
     max-width: 245px;
     background-color: #6E9C9F;
     color: white;
 }
+
+
+.slider-photo-static-1 {
+    /*Статичное фото в слайдере (левый нижний угол)*/
+    position: absolute;
+    z-index: 0;
+    /*bottom: calc(var(--slider-photo-static-height-1) - 13px);*/
+    bottom: var(--slider-photo-static-bottom-position-shift-1);
+    /*calc(var(--slider-photo-static-height-1));*/
+    right: calc(var(--slider-photo-static-width-1) + var(--slider-photo-static-right-position-shift-1));
+    height: var(--slider-photo-static-height-1);
+}
+
+.slider-photo-static-1 img {
+    height: 100%;
+    object-fit: cover;
+}
+
+
 
 main {
     position: relative;
@@ -123,11 +152,11 @@ main {
         --h1-font-size: 3.5vw;
 
         /*Переменные габаритов боковой панели. Декоративные функции.*/
-        --aside-height: 60vh;
+        --aside-height: 650px;
         --aside-width: 42vw;
         --slider-content-info-width: 90%;
         --slider-content-info-font-size: 16px;
-        --img-height-shift: 15vh;
+        --img-height-shift: 10vh;
 
     }
 
