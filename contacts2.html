@@ -84,6 +84,7 @@
         </div>
     </nav>
     <!--Окончание панели навигации-->
+
     <div class="contacts-container">
         <header>
             <h1>Контакты</h1>
@@ -127,24 +128,27 @@
 
 
 
-
+        <!--Блок кода получения обратного звонка-->
         <div id="background-modal">
 
         </div>
-        <form id="form-callback" method="get" action="#">
-            <button id="btn-close">x</button>
+        <form id="form-callback">
+            <button id="btn-close"><a href="#"> x</a></button>
             <h4>Заказать обратный звонок</h4>
             <div class="contact-info">
                 <input type="text" id="contact_name" name="contact_name" placeholder="Имя">
                 <input type="email" id="callback-email" name="email" placeholder="E-mail">
-                <input type="tel" id="callback-phone" name="phone" placeholder="Телефон: 7495823412" required>
+                <input type="tel" id="callback-phone" name="phone" placeholder="Телефон: +74958235412" required>
             </div>
             <button type="submit" id="callback-submit" class="send1">Заказать звонок</button>
         </form>
-        <form id="return-call" method="get" action="#">
+
+        <form id="return-call">
             <h4>Отлично! Мы скоро вам перезвоним</h4>
-            <button type="submit" id="return-call-submit" class="send2">Закрыть</button>
+            <button type="submit" id="return-call-submit" class="send2">Закрыть</button></a>
         </form>
+        <!--Конец блока кода получения обратного звонка-->
+
     </div>
 </body>
 

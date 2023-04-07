@@ -9,9 +9,11 @@ https://www.figma.com/file/OFNh7sSivQKwPRV4hBv8Yi/WOMAZING-%2B?node-id=0-1&t=DCg
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="assets/js/main.js"></script>
+    <script defer src="assets/js/callback.js"></script>
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/navigation.css">
+    <link rel="stylesheet" href="assets/css/callback.css">
     <link rel="stylesheet" href="assets/css/shop.css">
     <title>МАГАЗИН</title>
 
@@ -69,7 +71,7 @@ https://www.figma.com/file/OFNh7sSivQKwPRV4hBv8Yi/WOMAZING-%2B?node-id=0-1&t=DCg
             </div>
         </div>
         <div class="nav-phone">
-            <a href="#">
+            <a href="#" id="callback">
                 <div class="phone-img">
                     <img src="assets/buttons/phone.svg" alt="телефон">
                     <img src="assets/buttons/phone-hover.svg" alt="телефон">
@@ -261,6 +263,28 @@ https://www.figma.com/file/OFNh7sSivQKwPRV4hBv8Yi/WOMAZING-%2B?node-id=0-1&t=DCg
     </div>
 
 
+
+
+    <!--Блок кода получения обратного звонка-->
+    <div id="background-modal">
+
+    </div>
+    <form id="form-callback">
+        <button id="btn-close"><a href="#"> x</a></button>
+        <h4>Заказать обратный звонок</h4>
+        <div class="contact-info">
+            <input type="text" id="contact_name" name="contact_name" placeholder="Имя">
+            <input type="email" id="callback-email" name="email" placeholder="E-mail">
+            <input type="tel" id="callback-phone" name="phone" placeholder="Телефон: +74958235412" required>
+        </div>
+        <button type="submit" id="callback-submit" class="send1">Заказать звонок</button>
+    </form>
+
+    <form id="return-call">
+        <h4>Отлично! Мы скоро вам перезвоним</h4>
+        <button type="submit" id="return-call-submit" class="send2">Закрыть</button></a>
+    </form>
+    <!--Конец блока кода получения обратного звонка-->
 </body>
 
 

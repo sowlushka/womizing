@@ -105,7 +105,7 @@ h4 {
 }
 
 #return-call {
-    /*display: none;*/
+    display: none;
     position: fixed;
     z-index: var(--z-index-form-return-call);
     width: var(--form-return-call-width);
@@ -116,6 +116,7 @@ h4 {
     text-align: center;
     background-color: #FFFFFF;
 }
+
 .send2 {
     width: 120px;
     height: 47px;
