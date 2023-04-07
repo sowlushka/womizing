@@ -18,11 +18,7 @@ document.getElementById("btn-close").onclick = function () {
 
 document.getElementById("callback-phone").oninput = function () {
     /*Простейшая проверка номера телефона на корректность*/
-    var inpt_phone = this.value;
-    /*var re = /^([+]?[0-9\s-\(\)]{3,25})*$/i;*/
-
-    input_phone = inpt_phone.replace(/[^0-9]/g, '');
-    this.value = input_phone;
+    this.value = normalizePhoneNumber(this.value);
 }
 
 
@@ -43,4 +39,28 @@ document.getElementById("form-callback").onsubmit = function () {
     document.getElementById("form-callback").classList.remove("background-display");
     return true;
 
+}
+
+function normalizePhoneNumber(phoneNumber) {
+    if (!phoneNumber.length) {
+        return phoneNumber;
+    }
+
+    var result = [];
+    var idx = 0;
+    while (idx < phoneNumber.length && !/[\d+]/.test(phoneNumber[idx])) { idx += 1; }
+
+    if (idx == phoneNumber.length) {
+        return null;
+    }
+
+    result[0] = phoneNumber[idx];
+
+    while (++idx < phoneNumber.length) {
+        if (/[\d]/.test(phoneNumber[idx])) {
+            result[result.length] = phoneNumber[idx];
+        }
+    }
+
+    return result.join('');
 }
