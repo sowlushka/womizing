@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/navigation.css">
     <link rel="stylesheet" href="assets/css/callback.css">
+    <link rel="stylesheet" href="assets/css/basket.css">
     <title>Корзина</title>
 
 </head>
@@ -83,9 +84,44 @@
         </div>
     </nav>
     <!--Окончание панели навигации-->
-
+    <header>
     <h1>Корзина</h1>
+    <a href="index.html">Главная</a>&ensp;&mdash;&ensp;
+    <div class="curr-page-position">Корзина</div>
+    </header>
+    <main>
+        <div class="commodity_total">
+        <div class="commodity">Товар</div>
+        <div class="worth">Цена</div>
+        <div class="amount">Количество</div>
+        <div class="total">Всего</div>
+        </div>
+        <hr>
+        <div class="purchase_price">
+        <div class="purchase">
+        <button id="btn-close1"><a href="#">x</a></button>
+        <img src="assets/products/brooke-cagle-h3vR1F8-caI.jpg" class="shirt_image">
+        <div class="shirt">Футболка USA</div>
+        </div>
+        <div class="new_price1">$129</div>
+        <form method="get" action="basket.html">
+            <input type="number" name="quantity" id="quantity1" min="1" max="30" step="1" value="1">
+        </form>
+        <div class="new_price2">$129</div>
+        </div>
 
+        <form class="form1">
+        <input type="text" id="enter_coupon" placeholder="Введите купон">
+        <button type="submit" class="send3">Применить купон</button>
+        <button type="submit" class="send4">Обновить корзину</button>
+        </form>
+        <div class="total1_send5">
+        <div class="subtotal">Подытог: $129</div>
+        <div class="total1">Итого: $129</div>
+        <button type="submit" class="send5">Оформить заказ</button>
+        </div>
+        </div>
+    </main>
 
 
 
@@ -96,7 +132,7 @@
 
     </div>
     <form id="form-callback">
-        <button id="btn-close"><a href="#"> x</a></button>
+        <button id="btn-close"><a href="#">x</a></button>
         <h4>Заказать обратный звонок</h4>
         <div class="contact-info">
             <input type="text" id="contact_name" name="contact_name" placeholder="Имя">
