@@ -206,7 +206,7 @@ nav a:hover {
     }
 
     nav {
-        grid-template-columns: 1fr 170px 40px;
+        grid-template-columns: 1fr 157px 36px;
         font-size: 14px;
         gap: 10px;
 

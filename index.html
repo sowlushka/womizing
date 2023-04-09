@@ -15,8 +15,9 @@ https://www.figma.com/file/OFNh7sSivQKwPRV4hBv8Yi/WOMAZING-%2B?node-id=0-1&t=DCg
     <script defer src="assets/js/callback.js"></script>
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/navigation.css">
+    <link rel="stylesheet" href="assets/css/shop.css">
+    <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/callback.css">
     <link rel="stylesheet" href="assets/css/itc-slider.css">
     <!--Слайдер-->
@@ -106,7 +107,7 @@ https://www.figma.com/file/OFNh7sSivQKwPRV4hBv8Yi/WOMAZING-%2B?node-id=0-1&t=DCg
                         <div class="itc-slider__item">
                             <!-- Контент 1 слайда -->
                             <div class="text-slider-content">
-                                <h1>Новые поступления в этом сезоне</h1>
+                                <h1>Новые поступления <br>в этом сезоне</h1>
                                 <div class="text-slider-content-info">
                                     Утонченные сочетания и бархатные оттенки - вот то, что вы искали в этом сезоне.
                                     Время
@@ -117,7 +118,7 @@ https://www.figma.com/file/OFNh7sSivQKwPRV4hBv8Yi/WOMAZING-%2B?node-id=0-1&t=DCg
                         <div class="itc-slider__item">
                             <!-- Контент 2 слайда -->
                             <div class="text-slider-content">
-                                <h1>Что-то новенькое. Мы заждались тебя.</h1>
+                                <h1>Что-то новенькое.<br> Мы заждались тебя.</h1>
                                 <div class="text-slider-content-info">
                                     Надоело искать себя в сером городе? Настало время новых идей, свежих красок и
                                     вдохновения с Womazing!
@@ -184,23 +185,109 @@ https://www.figma.com/file/OFNh7sSivQKwPRV4hBv8Yi/WOMAZING-%2B?node-id=0-1&t=DCg
                 <button class="itc-slider__btn itc-slider__btn_next"></button>
                 -->
             </div>
-            <div class="slider-photo-static-1">
-                <img src="assets/img/allef-vinicius-YG97wpX0OEg-unsplash-1.jpg">
-            </div>
         </div>
     </div>
-
+    <!--Статичные фото-->
+    <div class="slider-photo-static-1">
+        <img src="assets/img/allef-vinicius-YG97wpX0OEg-unsplash-1.jpg">
+    </div>
+    <div class="slider-photo-static-2">
+        <img src="assets/img/ionut-comanici-RDcEWH5hSDE.jpg">
+    </div>
 
     <main>
-        Пока просто что-то есть. Потом заполню контентом.
+        <h2>Новая коллекция</h2>
+        <div class="item_container">
+            <!--Начало блока из 3-х товаров-->
+            <div class="figure">
+                <figure id="item_id_1">
+                    <a href="item.html?id=item_id_1" class="card-background">
+                        <img src="assets/products/brooke-cagle-h3vR1F8-caI.jpg" alt="Trulli" style="width:100%">
+                    </a>
+                    <figcaption><a href="item.html?id=item_id_1">Свитшот Sweet Shot</a></figcaption>
+                </figure>
+                <div class="price">
+                    <div class="old_price">$229</div>
+                    <div class="new_price">$129</div>
+                </div>
+            </div>
+        
+            <div class="figure">
+                <figure id="item_id_2">
+                    <a href="item.html?id=item_id_2" class="card-background">
+                        <img src="assets/products/christopher-campbell-va0YmkIFtPA.jpg" alt="Trulli" style="width:100%">
+                    </a>
+                    <figcaption><a href="item.html?id=item_id_2">Купальник Glow</a></figcaption>
+                </figure>
+                <div class="price">
+                    <div class="old_price"></div>
+                    <div class="new_price">$129</div>
+                </div>
+            </div>
+            <div class="figure">
+                <figure id="item_id_3">
+                    <a href="item.html?id=item_id_3" class="card-background">
+                        <img src="assets/products/ben-eaton-L_kaTYIuu1o.jpg" alt="Trulli" style="width:100%">
+                    </a>
+                    <figcaption><a href="item.html?id=item_id_3">Свитшот Sweet Shot</a></figcaption>
+                </figure>
+                <div class="price">
+                    <div class="old_price"></div>
+                    <div class="new_price">$129</div>
+                </div>
+            </div>
+            <!--Конец блока из 3-х товаров-->
+        </div>
+        <div class="to_shop2">
+            <a href="shop.html">
+                <div>
+                    В магазин
+                </div>
+            </a>
+        </div>
+        <h2>Что для нас важно</h2>
+        <div class="credo">
+            <article>
+                <img src="assets/buttons/stamp.png">
+                <h3>Качество</h3>
+                <div class="credo-info">
+                    Наши профессионалы работают на лучшем оборудовании для пошива одежды беспрецедентного качества
+                </div>
+            </article>
+            <article>
+                <img src="assets/buttons/wheel.png">
+                <h3>Скорость</h3>
+                <div class="credo-info">
+                    Благодаря отлаженной системе в Womazing мы можем отшивать до 20-ти единиц продукции в наших собственных цехах
+                </div>
+            </article>
+            <article>
+                <img src="assets/buttons/hand.png">
+                <h3>Ответственность</h3>
+                <div class="credo-info">
+                    Мы заботимся о людях и планете. Безотходное производство и комфортные условия труда - все это Womazing
+                </div>
+            </article>
+        </div>
+        <h2>Команда мечты Womazing</h2>
+        <div class="team">
+            <div class="team-img">
+                <img src="assets/img/adam-winger-fI-TKWjKYls.jpg" alt="Команда мечты">
+            </div>
 
-
-
+            <div class="team-content">
+                <h3>
+                    Для каждой
+                </h3>
+                <div class="team-info">
+                    <p>Каждая девушка уникальна. Однако, мы схожи в миллионе мелочей.</p>
+                    
+                    <p>Womazing ищет эти мелочи и создает прекрасные вещи, которые выгодно подчеркивают достоинства каждой девушки.</p>
+                </div>
+            </div>
+        </div>
+        
     </main>
-
-
-
-
 
 
 
