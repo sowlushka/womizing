@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/css/navigation.css">
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/callback.css">
+    <link rel="stylesheet" href="assets/css/checkout.css">
     <title>Оформление заказа</title>
 
 </head>
@@ -84,7 +85,53 @@
         </div>
     </nav>
     <!--Окончание панели навигации-->
+    <header>
+        <h1>Оформление заказа</h1>
+        <a href="index.html">Главная</a>&ensp;&mdash;&ensp;
+        <div class="curr-page-position">Оформление заказа</div>
+    </header>
+    <main>
+        <div class="container_order">
+        <form class="form2">
+            <h3>Данные покупателя</h3>
+            <input type="text" id="contact_name1" placeholder="Имя">
+            <input type="email" id="email1" placeholder="E-mail">
+            <input type="phone" id="phone1" placeholder="Телефон">
+        </form>
+        <form class="form3">
+            <h3>Адрес получателя</h3>
+            <input type="text" id="country" placeholder="Страна">
+            <input type="text" id="city" placeholder="Город">
+            <input type="text" id="street" placeholder="Улица">  
+            <input type="text" id="house" placeholder="Дом">  
+            <input type="text" id="apartment" placeholder="Квартира">  
+        </form>
+        <form class="form4">
+            <h3>Комментарии</h3>
+            <textarea id="country1" placeholder="Страна"></textarea>
+        </form>
+            <div class="order">
+                <div class="your_order"><h3>Ваш заказ</h3></div>
+                <div class="purchase">Товар</div>
+                <div class="total">Всего</div>
+                <div class="shirt">Футболка USA</div>
+                <div class="price1">$129</div>
+                <div class="subtotal">Подытог</div>
+                <div class="price2">$129</div>
+                <div class="total_1">Итого</div>
+                <div class="price3">$129</div>
+            </div>
+            <form class="form5">
+                <h3>Способы оплаты</h3>
+                <div class="cash_pay">
+                <input type="radio" id="cash" name="cash" value="money">
+                <label for="cash">Оплата наличными</label>
+                </div>
+                <button type="submit" class="place-order">Разместить заказ</button>
+            </form>
+        </div>
 
+    </main>
 
 
 
