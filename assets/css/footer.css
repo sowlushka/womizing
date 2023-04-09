@@ -1,0 +1,79 @@
+@import url(navigation.css);
+
+footer{
+    background-color: #F1EADC;
+    padding-top: 104px;
+    padding-bottom: 100px;
+    margin-left: -250px;
+    margin-right: -250px;
+}
+
+.footer-container{
+    margin: 0px 250px;
+
+}
+
+.nav-shop-categories:hover, .business-info a:hover {
+    color: #6E9C9F!important;
+}
+
+.nav-shop-categories{
+    min-height: 18px;
+    margin: 10px 0px;
+}
+
+footer .nav-logo{
+    align-self: start;
+}
+
+footer .nav-phone{
+    align-self: start;
+}
+
+footer .nav-basket{
+    display: none;
+}
+
+.footer-logo-container{
+    display: none;
+}
+
+.business-info{
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width: 720px) {
+    footer{
+        background-color: #F1EADC;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .footer-logo-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding: 20px;
+    }
+    
+    footer .nav-phone{
+        display: none;
+    }
+
+    footer nav {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    footer .nav-bar
+    {
+        grid-column: 1/-1;
+    }
+    
+    
+}

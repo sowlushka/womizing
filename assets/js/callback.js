@@ -1,7 +1,8 @@
 /*Скрипты, обслуживающие работу формы уведомления об обратном звноке*/
 var request = new XMLHttpRequest();
 
-document.getElementById("callback").onclick = function () {
+
+function showCallbackForm() {
     /*Показываем форму на экране*/
     document.getElementById("background-modal").classList.add("background-display");
     document.getElementById("form-callback").classList.add("background-display");
