@@ -72,7 +72,7 @@ https://www.figma.com/file/OFNh7sSivQKwPRV4hBv8Yi/WOMAZING-%2B?node-id=0-1&t=DCg
             </div>
         </div>
         <div class="nav-phone">
-            <a href="#" id="callback">
+            <a href="#" onclick="showCallbackForm();">
                 <div class="phone-img">
                     <img src="assets/buttons/phone.svg" alt="телефон">
                     <img src="assets/buttons/phone-hover.svg" alt="телефон">
@@ -297,10 +297,10 @@ https://www.figma.com/file/OFNh7sSivQKwPRV4hBv8Yi/WOMAZING-%2B?node-id=0-1&t=DCg
     
                 <div class="nav-bar">
                     <div class="nav-main">
-                        <a href="#" class="link-current">Главная</a>
+                        <a href="index.html" >Главная</a>
                     </div>
                     <div class="nav-shop">
-                        <div><a href="shop.html">Магазин</a></div>
+                        <div><a href="#" class="link-current">Магазин</a></div>
                         <div class="nav-shop-categories"></div>
                         <a href="shop.html?category=cat_palto&page=1">
                             <div class="nav-shop-categories">Пальто</div>
@@ -362,7 +362,7 @@ https://www.figma.com/file/OFNh7sSivQKwPRV4hBv8Yi/WOMAZING-%2B?node-id=0-1&t=DCg
 
     </div>
     <form id="form-callback">
-        <button id="btn-close"><a href="#"> x</a></button>
+        <a id="btn-close" href="#">x</a>
         <h4>Заказать обратный звонок</h4>
         <div class="contact-info">
             <input type="text" id="contact_name" name="contact_name" placeholder="Имя">
@@ -374,7 +374,7 @@ https://www.figma.com/file/OFNh7sSivQKwPRV4hBv8Yi/WOMAZING-%2B?node-id=0-1&t=DCg
 
     <form id="return-call">
         <h4>Отлично! Мы скоро вам перезвоним</h4>
-        <button type="submit" id="return-call-submit" class="send2">Закрыть</button></a>
+        <button type="submit" id="return-call-submit" class="send2">Закрыть</button>
     </form>
     <!--Конец блока кода получения обратного звонка-->
 </body>

@@ -68,7 +68,7 @@
             </div>
         </div>
         <div class="nav-phone">
-            <a href="#" id="callback">
+            <a href="#" onclick="showCallbackForm();">
                 <div class="phone-img">
                     <img src="assets/buttons/phone.svg" alt="телефон">
                     <img src="assets/buttons/phone-hover.svg" alt="телефон">
@@ -96,7 +96,7 @@
             <h3>Данные покупателя</h3>
             <input type="text" id="contact_name1" placeholder="Имя">
             <input type="email" id="email1" placeholder="E-mail">
-            <input type="phone" id="phone1" placeholder="Телефон">
+            <input type="tel" id="phone1" placeholder="Телефон">
         </form>
         <form class="form3">
             <h3>Адрес получателя</h3>
@@ -121,11 +121,11 @@
                 <div class="total_1">Итого</div>
                 <div class="price3">$129</div>
             </div>
-            <form class="form5">
+            <form class="form5" method="get" action="success.html">
                 <h3>Способы оплаты</h3>
                 <div class="cash_pay">
-                <input type="radio" id="cash" name="cash" value="money">
-                <label for="cash">Оплата наличными</label>
+                    <input type="radio" id="cash" name="cash" value="money">
+                    <label for="cash">Оплата наличными</label>
                 </div>
                 <button type="submit" class="place-order">Разместить заказ</button>
             </form>
@@ -133,14 +133,105 @@
 
     </main>
 
-
+    <footer>
+        <div class="footer-container">
+    
+            <!--Логотип для мобильного экрана-->
+            <div class="footer-logo-container">
+                <div>
+                    <img src="assets/buttons/logo.svg" alt="dress">
+                    <span>WOMAZING</span>
+                </div>
+    
+                <div>
+                    <a href="#" onclick="showCallbackForm();">
+                        <div class="phone-img">
+                            <img src="assets/buttons/phone.svg" alt="телефон">
+                            <img src="assets/buttons/phone-hover.svg" alt="телефон">
+                        </div>
+                        <span>+7 (495) 823-54-12</span>
+                    </a>
+                </div>
+            </div>
+    
+            <nav>
+                <div class="nav-logo lg-block">
+                    <!--Логотип может использоваться сам по себе (в футере)
+                            оборачиваю в отдельный div для позиционирования в панели навигации-->
+                    <div class="logo">
+                        <img src="assets/buttons/logo.svg" alt="dress">
+                        <span>WOMAZING</span>
+                    </div>
+                </div>
+    
+                <div class="nav-bar">
+                    <div class="nav-main">
+                        <a href="index.html">Главная</a>
+                    </div>
+                    <div class="nav-shop">
+                        <div><a href="shop.html">Магазин</a></div>
+                        <div class="nav-shop-categories"></div>
+                        <a href="shop.html?category=cat_palto&page=1">
+                            <div class="nav-shop-categories">Пальто</div>
+                        </a>
+                        <a href="shop.html?category=cat_sweetshot&page=1">
+                            <div class="nav-shop-categories">Свитшоты</div>
+                        </a>
+                        <a href="shop.html?category=cat_kardigan&page=1">
+                            <div class="nav-shop-categories">Кардиганы</div>
+                        </a>
+                        <a href="shop.html?category=cat_tolst&page=1">
+                            <div class="nav-shop-categories">Толстовки</div>
+                        </a>
+                    </div>
+                    <div class="nav-brand">
+                        <a href="brand.html">О бренде</a>
+                    </div>
+                    <div class="nav-contacts">
+                        <a href="contacts.html">Контакты</a>
+                    </div>
+                </div>
+                <div class="nav-phone md-block lg-block">
+                    <a href="#" onclick="showCallbackForm();">
+                        <div class="phone-img">
+                            <img src="assets/buttons/phone.svg" alt="телефон">
+                            <img src="assets/buttons/phone-hover.svg" alt="телефон">
+                        </div>
+                        <span>+7 (495) 823-54-12</span>
+                    </a>
+                </div>
+                <div class="nav-basket">
+                    <a href="basket.html">
+                        <div class="link-img-container">
+                            <img src="assets/buttons/basket.svg" alt="корзина">
+                        </div>
+                    </a>
+                </div>
+            </nav>
+            <!--Окончание панели навигации-->
+    
+    
+            <div class="business-info">
+                <div>
+                    &#169; Все права защищены
+                </div>
+                <div>
+                    <a href="#">Политика конфиденциальности</a>
+                </div>
+                <div>
+                    <a href="#">Публичная оферта</a>
+                </div>
+            </div>
+    
+        </div>
+    </footer>
 
     <!--Блок кода получения обратного звонка-->
     <div id="background-modal">
 
     </div>
     <form id="form-callback">
-        <button id="btn-close"><a href="#"> x</a></button>
+        <a id="btn-close" href="#">x</a>
         <h4>Заказать обратный звонок</h4>
         <div class="contact-info">
             <input type="text" id="contact_name" name="contact_name" placeholder="Имя">
@@ -152,7 +243,7 @@
 
     <form id="return-call">
         <h4>Отлично! Мы скоро вам перезвоним</h4>
-        <button type="submit" id="return-call-submit" class="send2">Закрыть</button></a>
+        <button type="submit" id="return-call-submit" class="send2">Закрыть</button>
     </form>
     <!--Конец блока кода получения обратного звонка-->
 </body>

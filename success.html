@@ -68,7 +68,7 @@
             </div>
         </div>
         <div class="nav-phone">
-            <a href="#" id="callback">
+            <a href="#" onclick="showCallbackForm();">
                 <div class="phone-img">
                     <img src="assets/buttons/phone.svg" alt="телефон">
                     <img src="assets/buttons/phone-hover.svg" alt="телефон">
@@ -141,7 +141,7 @@
     
                 <div class="nav-bar">
                     <div class="nav-main">
-                        <a href="#" class="link-current">Главная</a>
+                        <a href="index.html">Главная</a>
                     </div>
                     <div class="nav-shop">
                         <div><a href="shop.html">Магазин</a></div>
@@ -207,7 +207,7 @@
 
     </div>
     <form id="form-callback">
-        <button id="btn-close"><a href="#"> x</a></button>
+        <a id="btn-close" href="#">x</a>
         <h4>Заказать обратный звонок</h4>
         <div class="contact-info">
             <input type="text" id="contact_name" name="contact_name" placeholder="Имя">
@@ -219,7 +219,7 @@
 
     <form id="return-call">
         <h4>Отлично! Мы скоро вам перезвоним</h4>
-        <button type="submit" id="return-call-submit" class="send2">Закрыть</button></a>
+        <button type="submit" id="return-call-submit" class="send2">Закрыть</button>
     </form>
     <!--Конец блока кода получения обратного звонка-->
 </body>
