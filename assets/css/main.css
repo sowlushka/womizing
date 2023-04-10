@@ -8,6 +8,7 @@ body {
     background: white;
     /*Поля проекта для широкоэкранного макета*/
     padding: 54px 250px 0px 250px;
+    overflow-x: hidden;
 }
 
 a {
