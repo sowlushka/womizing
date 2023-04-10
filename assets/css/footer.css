@@ -13,6 +13,10 @@ footer{
 
 }
 
+body{
+    overflow-x: hidden;
+}
+
 .nav-shop-categories:hover, .business-info a:hover {
     color: #6E9C9F!important;
 }

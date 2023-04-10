@@ -299,12 +299,13 @@ nav a:hover {
     }
 
     nav {
-        grid-template-columns: 1.1fr 170px 1fr;
+        grid-template-columns: 1.1fr 140px 1fr;
         gap: 5px;
     }
 
     .nav-phone {
         grid-column: 2/3;
+        letter-spacing: -.05em;
     }
 
     .nav-basket {
